@@ -5,7 +5,7 @@ import { PiHandWavingFill } from "react-icons/pi";
 import { Link } from 'react-router-dom'
 // import { DisplayContext } from '../../../../context/DisplayContext';
 import egy from '../../../../assets/HiStudy/Flag_of_Egypt.svg.webp'
-export default function Demo() {
+export default function demo() {
 
   const [scrollY, setScrollY] = useState(0);
 
