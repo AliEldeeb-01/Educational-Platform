@@ -18,14 +18,3 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Modified by Antigravity: RTL & Arabic font styling */
-[dir="rtl"] {
-  font-family: 'Cairo', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  text-align: right;
-}
-
-/* Modified by Antigravity: Ensure LTR uses Inter/system font */
-[dir="ltr"] {
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  text-align: left;
-}

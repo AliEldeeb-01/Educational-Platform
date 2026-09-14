@@ -59,7 +59,7 @@ export default function Drop2({ isHandle, setIsHandle }) {
     <section className={`opacity-0 invisible group-hover/home:opacity-100 group-hover/home:visible fixed  left-1/2 -translate-x-1/2 ${dark == true ?
       `bg-[#162456] text-blue-200`
       : `bg-[#F0F5FA] text-black`}
-       p-6 rounded-2xl border border-amber-500 shadow-2xl w-[1140px] max-h-[500px] overflow-y-auto z-50 transition-all duration-300 ease-in-out grid grid-cols-5 gap-6 before:absolute before:top-[-40px] before:left-0 before:w-full before:h-[40px] translate-y-11 before:content-[''] ${isHandle == true ?
+       p-6 rounded-2xl border border-amber-500 shadow-2xl lg:w-[1000px] xl:w-[1140px] max-h-[500px] overflow-y-auto z-50 transition-all duration-300 ease-in-out grid grid-cols-5 gap-6 before:absolute before:top-[-40px] before:left-0 before:w-full before:h-[40px] translate-y-11 before:content-[''] ${isHandle == true ?
         `top-[35px]` :
         `top-[78px]`} `}>
 

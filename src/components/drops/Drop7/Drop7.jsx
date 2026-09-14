@@ -9,7 +9,7 @@ export default function Drop7() {
        - absolute top-[100%] left-1/2 -translate-x-1/2 mt-5: لضمان السنترة تحت كلمة Blog.
        - w-[820px] grid-cols-[1.2fr_1.2fr_260px]: توزع الأعمدة النصية بشكل متناسق وتعطي الكارت مساحته المثالية.
     */
-    <section className={`opacity-0 invisible group-hover/drop7:opacity-100 group-hover/drop7:visible absolute top-[100%] left-1/2 -translate-x-1/2  p-7 rounded-2xl border border-amber-400 shadow-2xl w-[820px] transition-all duration-300 ease-in-out grid grid-cols-[1.2fr_1.2fr_260px] gap-6 z-50 -translate-y-2  
+    <section className={`opacity-0 invisible group-hover/drop7:opacity-100 group-hover/drop7:visible absolute top-[100%] left-1/2 -translate-x-9/12  p-7 rounded-2xl border border-amber-400 shadow-2xl w-[820px] transition-all duration-300 ease-in-out grid grid-cols-[1.2fr_1.2fr_260px] gap-6 z-50 -translate-y-2  
       ${dark == true ?
         `bg-[#192335] text-white `
         : `bg-white text-black`}  `}>

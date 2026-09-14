@@ -9,7 +9,7 @@ export default function Drop6() {
        - w-[780px]: عرض مثالي ومطابق لأبعاد المنيو في الصورة.
        - flex flex-col: عشان نقسم المنيو لجزء علوي (الأعمدة) وجزء سفلي (البار البنفسجي).
     */
-    <section className={` opacity-0 invisible group-hover/drop6:opacity-100 group-hover/drop6:visible absolute top-[100%] left-1/2 -translate-x-1/2 rounded-2xl border border-amber-400 shadow-2xl w-[780px] transition-all duration-300 ease-in-out flex flex-col overflow-hidden z-50 -translate-y-2 
+    <section className={` opacity-0 invisible group-hover/drop6:opacity-100 group-hover/drop6:visible absolute top-[100%] left-1/2 -translate-x-2/3 rounded-2xl border border-amber-400 shadow-2xl w-[780px] transition-all translate-y-6 duration-300 ease-in-out flex flex-col overflow-hidden z-50 
       ${dark == true ?
         `bg-[#192335] text-white `
         : `bg-white text-black`} `}>

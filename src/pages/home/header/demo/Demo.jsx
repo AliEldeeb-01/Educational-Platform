@@ -35,7 +35,7 @@ export default function Demo() {
 
       <div className="container w-full mx-auto px-4">
 
-        <div className="bg-[#192335] text-white justify-between min-h-10 items-center flex flex-col w-full lg:flex-row gap-4 py-2">
+        <div className="bg-[#192335] text-white justify-between min-h-10 items-center flex flex-col w-full lg:flex-row gap-4 py-1">
 
           {/* الجزء الأيسر */}
 
@@ -84,7 +84,7 @@ export default function Demo() {
 
             {/* Social Icons */}
 
-            <div className="hidden sm:flex flex-row gap-1 border-e border-gray-700 pe-4">
+            <div className="hidden lg:flex flex-row gap-1 border-e border-gray-700 pe-4">
 
               <div className="rounded-full opacity-50 hover:opacity-100 cursor-pointer p-2 hover:bg-[#3b4049]">
                 <FaFacebook />
