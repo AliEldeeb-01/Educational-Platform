@@ -521,14 +521,14 @@ export default function Details() {
                 className={`font-bold text-[20px] ${dark ? 'text-gray-100' : 'text-gray-600'
                   }`}
               >
-                ${(dataCourses?.price - (dataCourses?.price * dataCourses?.discount / 100)).toFixed(0)}
+                ${(dataCourses?.price - (dataCourses?.price * dataCourses?.discount / 100))?.toFixed(0)}
               </span>
 
               <s
                 className={`text-[20px] scale-85 font-bold ${dark ? 'text-gray-500' : 'text-gray-300'
                   }`}
               >
-                ${(dataCourses?.price).toFixed(2)}
+                ${(dataCourses?.price)?.toFixed(2)}
               </s>
 
               <span className='flex flex-row justify-center items-center gap-1 px-3 text-red-600 bg-red-100 text-[15px] rounded-lg py-1'>
