@@ -807,7 +807,7 @@ export default function Details() {
       {/* Course content section */}
 
       <div
-        className='lg:w-[70%] lg:mx-0 w-[100%] flex '
+        className='sec lg:w-[70%] lg:mx-0 w-[100%] flex '
         id='Course'
       >
         <section className='flex w-[95%] ' id='Course'>
