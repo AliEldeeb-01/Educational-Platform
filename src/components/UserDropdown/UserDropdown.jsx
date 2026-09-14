@@ -38,7 +38,7 @@ export const UserDropdown = () => {
         </Button>
 
         {/* الـ Popover اللي بينزل تحت الزرار أوتوماتيك */}
-        <Popover placement="bottom end" className={`${dark == false ? `bg-white text-black` : `bg-[#1C2833] text-white`} z-50 min-w-56 mt-2 rounded-xl shadow-xl border border-amber-500 p-1 translate-y-1.5 sm:translate-x-0`}>
+        <Popover placement="bottom end" className={`${dark == false ? `bg-white text-black` : `bg-[#1C2833] text-white`} z-50 min-w-56 mt-2 rounded-xl shadow-xl border border-amber-500 p-1 translate-y-[5px] sm:translate-x-0`}>
           <Menu className="outline-none">
 
             <MenuItem className="flex items-center justify-start hover:text-white gap-[40px] px-3 py-2 text-sm rounded-lg cursor-pointer outline-none">
