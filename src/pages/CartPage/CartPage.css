@@ -1,0 +1,16 @@
+.header-cart {
+    background: url(../../assets/HiStudy/bg-g1.webp);
+    background-size: cover;
+}
+.header-cart-dark {
+    background: url(../../assets/HiStudy/Bg-darkMode.jpg);
+    background-size: cover;
+}
+
+
+
+.custo-decoration{
+    text-decoration: line-through;
+    text-decoration-thickness: 2px; 
+    text-decoration-color: black;
+}

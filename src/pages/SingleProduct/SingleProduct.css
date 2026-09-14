@@ -1,0 +1,20 @@
+.header-single {
+    background: url(../../assets/HiStudy/bg-g1.webp);
+    background-size: cover;
+}
+
+.header-single-dark {
+    background: url(../../assets/HiStudy/Bg-darkMode.jpg);
+    background-size: cover;
+}
+
+.linethrough {
+    text-decoration-line: line-through;
+    text-decoration-thickness: 2px;
+    text-decoration-color: rgb(150, 226, 43);
+}
+
+.disabeldBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

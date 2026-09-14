@@ -1,0 +1,17 @@
+.headerDetails {
+    background: url(../../assets/HiStudy/bg-image-10.webp) no-repeat !important;
+    background-size: cover !important;
+    z-index: 40;
+}
+
+.headerDetails-dark {
+    background: url(../../assets/HiStudy/Bg-darkMode.jpg) no-repeat !important;
+    background-size: cover !important;
+    z-index: 40;
+}
+
+
+.active {
+    background-color: rgb(17, 17, 250);
+    color: white;
+}
