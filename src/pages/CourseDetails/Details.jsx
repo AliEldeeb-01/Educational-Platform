@@ -283,7 +283,7 @@ export default function Details() {
                 className={`font-bold text-[20px] ${dark ? 'text-gray-100' : 'text-gray-500'
                   }`}
               >
-                ${(dataCourses?.price - (dataCourses?.price * dataCourses?.discount / 100)).toFixed(2)}
+                ${(dataCourses?.price - (dataCourses?.price * dataCourses?.discount / 100))?.toFixed(2)}
               </span>
 
               <s
