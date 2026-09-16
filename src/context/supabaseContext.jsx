@@ -1,6 +1,7 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState,useContext } from "react";
 import { supabase } from "../clientSupabase";
 import Swal from 'sweetalert2'
+import { CartContext } from "./CartContext";
 
 // or via CommonJS
 
@@ -12,6 +13,7 @@ export const RegisterSupabaseProvider = ({ children }) => {
     const [regDataLoading, setRegDataLoading] = useState(false)
     const [logInLoading, setLogInLoading] = useState(false)
     const [currentUser, setCurrentUser] = useState(null)
+    const {cartIdes ,setCartIdes} = useContext(CartContext)
     // const Navigate = useNavigate()
 
     useEffect(
@@ -139,6 +141,7 @@ export const RegisterSupabaseProvider = ({ children }) => {
                     icon: "success",
                     timer: '1200'
                 });
+                setCartIdes({})
                 setCurrentUser(null)
                 Navigate('/')
 
