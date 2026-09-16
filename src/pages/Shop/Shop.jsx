@@ -19,7 +19,7 @@ export default function Shop() {
         <div className={`header-shop min-h-[90vh] flex flex-col px-20 py-32 w-full mx-auto ${dark ? 'header-shop-dark' : ''}`}>
           <div className=' flex flex-col gap-6'>
             <div className={`flex flex-row gap-1 text-sm items-center ${dark ? 'text-gray-400' : 'text-gray-400'}`}>
-              <Link to={'/'} className={`cursor-pointer hover:text-blue-600 transition-all duration-200 ${dark ? 'text-gray-400' : 'text-gray-500'}`} >
+              <Link to={'/'} className={`cursor-pointer hover:text-blue-600 active:text-blue-600 transition-all duration-200 ${dark ? 'text-gray-400' : 'text-gray-500'}`} >
                 Home
               </Link>
               <MdArrowForwardIos className={`size-4 ${dark ? 'text-gray-500' : 'text-gray-300'}`} />

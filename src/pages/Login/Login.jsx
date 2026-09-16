@@ -70,7 +70,7 @@ export default function Register() {
         >
           <Link
             to={'/'}
-            className={`hover:text-blue-700 transition duration-200 ${dark ? 'text-gray-300' : 'text-gray-600'
+            className={`hover:text-blue-700 active:text-blue-700 transition duration-200 ${dark ? 'text-gray-300' : 'text-gray-600'
               }`}
           >
             Home
@@ -234,7 +234,7 @@ export default function Register() {
         >
           Don't have an account...? Sign up
 
-          <span className='scale-x-0 group-hover:scale-x-100 duration-400 transition h-0.5 bg-red-500 absolute -bottom-0.5 left-0 right-0 origin-left'></span>
+          <span className='scale-x-0 group-hover:scale-x-100 group-active:scale-x-100 duration-400 transition h-0.5 bg-red-500 absolute -bottom-0.5 left-0 right-0 origin-left'></span>
         </Link>
 
       </div>

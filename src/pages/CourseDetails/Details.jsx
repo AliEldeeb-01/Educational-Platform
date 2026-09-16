@@ -121,7 +121,7 @@ export default function Details() {
           <div className='flex flex-row gap-1 items-center justify-center'>
             <Link
               to={'/'}
-              className={`hover:text-blue-600 transition-all duration-300 ${dark ? 'text-gray-400' : 'text-gray-500'
+              className={`hover:text-blue-600 active:text-blue-600 transition-all duration-300 ${dark ? 'text-gray-400' : 'text-gray-500'
                 }`}
             >
               Home
@@ -168,10 +168,10 @@ export default function Details() {
 
             <div className='flex flex-col sm:flex-row'>
               <span
-                className={`p-2 hover:scale-105 rounded-lg ${dark
+                className={`p-2 hover:scale-105 active:scale-105 rounded-lg ${dark
                   ? 'bg-[#2b374b] text-gray-200'
                   : 'bg-[#f4f4f45f] text-[#192335]'
-                  } hover:text-blue-400 hover:bg-blue-100 transition-all duration-300 cursor-pointer text-sm`}
+                  } hover:text-blue-400 active:text-blue-400 hover:bg-blue-100 active:bg-blue-100 transition-all duration-300 cursor-pointer text-sm`}
               >
                 215,475 rating
               </span>
@@ -198,7 +198,7 @@ export default function Details() {
               </span>
 
               <span
-                className={`cursor-pointer transition-all duration-200 hover:text-blue-400 ${dark ? 'text-gray-100' : 'text-[#192335]'
+                className={`cursor-pointer transition-all duration-200 hover:text-blue-400 active:text-blue-400 ${dark ? 'text-gray-100' : 'text-[#192335]'
                   }`}
               >
                 Angela
@@ -209,7 +209,7 @@ export default function Details() {
               </span>
 
               <span
-                className={`cursor-pointer transition-all duration-200 hover:text-blue-400 ${dark ? 'text-gray-100' : 'text-[#192335]'
+                className={`cursor-pointer transition-all duration-200 hover:text-blue-400 active:text-blue-400 ${dark ? 'text-gray-100' : 'text-[#192335]'
                   }`}
               >
                 Development
@@ -309,24 +309,24 @@ export default function Details() {
               <button
                 onClick={() => handleAddToCartCourses(dataCourses)}
                 disabled={cartIdes[dataCourses.id] == 1}
-                className='disabled:opacity-50 disabled:cursor-not-allowed bg-gradient-to-r hover:bg-gradient-to-l transition-all duration-200 from-fuchsia-600 to-purple-600 group text-white p-5 w-[80%] rounded-2xl flex flex-row items-center gap-1.5 text-center justify-center cursor-pointer'
+                className='disabled:opacity-50 disabled:cursor-not-allowed bg-gradient-to-r hover:bg-gradient-to-l active:bg-gradient-to-l transition-all duration-200 from-fuchsia-600 to-purple-600 group text-white p-5 w-[80%] rounded-2xl flex flex-row items-center gap-1.5 text-center justify-center cursor-pointer'
               >
                 Add to card
 
                 <FaArrowRight
-                  className={`group-hover:translate-x-0 group-hover:opacity-100 -translate-x-5 opacity-0 transition-all duration-300 ${cartIdes[dataCourses.id] == 1 ? `hidden` : `inline`
+                  className={`group-hover:translate-x-0 group-active:translate-x-0 group-hover:opacity-100 group-active:opacity-100 -translate-x-5 opacity-0 transition-all duration-300 ${cartIdes[dataCourses.id] == 1 ? `hidden` : `inline`
                     }`}
                 />
 
               </button>
 
               {/* <button
-                className={`hover:bg-blue-700 border-2 ${dark ? 'border-gray-600 text-gray-100' : 'border-gray-200'
-                  } group/buy hover:text-white transition-all duration-300 p-5 w-[80%] rounded-2xl flex flex-row items-center gap-1.5 text-center justify-center cursor-pointer`}
+                className={`hover:bg-blue-700 active:bg-blue-700 border-2 ${dark ? 'border-gray-600 text-gray-100' : 'border-gray-200'
+                  } group/buy hover:text-white active:text-white transition-all duration-300 p-5 w-[80%] rounded-2xl flex flex-row items-center gap-1.5 text-center justify-center cursor-pointer`}
               >
                 BUY NOW ?...
 
-                <FaArrowRight className='group-hover/buy:translate-x-0 group-hover/buy:opacity-100 -translate-x-5 opacity-0 transition-all duration-300' />
+                <FaArrowRight className='group-hover/buy:translate-x-0 group-active/buy:translate-x-0 group-hover/buy:opacity-100 group-active/buy:opacity-100 -translate-x-5 opacity-0 transition-all duration-300' />
               </button> */}
 
               <p
@@ -547,12 +547,12 @@ export default function Details() {
               <button
                 onClick={() => handleAddToCartCourses(dataCourses)}
                 disabled={cartIdes[dataCourses.id] == 1}
-                className='disabled:opacity-50 disabled:cursor-not-allowed bg-gradient-to-r hover:bg-gradient-to-l transition-all duration-200 from-fuchsia-600 to-purple-600 group p-5 w-[80%] rounded-2xl flex flex-row items-center gap-1.5 text-center justify-center cursor-pointer'
+                className='disabled:opacity-50 disabled:cursor-not-allowed bg-gradient-to-r hover:bg-gradient-to-l active:bg-gradient-to-l transition-all duration-200 from-fuchsia-600 to-purple-600 group p-5 w-[80%] rounded-2xl flex flex-row items-center gap-1.5 text-center justify-center cursor-pointer'
               >
                 Add to card
 
                 <FaArrowRight
-                  className={`group-hover:translate-x-0 group-hover:opacity-100 -translate-x-5 opacity-0 transition-all duration-300 ${cartIdes[dataCourses.id] == 1 ? `hidden` : `inline`
+                  className={`group-hover:translate-x-0 group-active:translate-x-0 group-hover:opacity-100 group-active:opacity-100 -translate-x-5 opacity-0 transition-all duration-300 ${cartIdes[dataCourses.id] == 1 ? `hidden` : `inline`
                     }`}
                 />
               </button>
@@ -588,7 +588,7 @@ export default function Details() {
             className={`p-4 rounded-3xl nav-link ${dark
               ? 'bg-[#29364b] text-gray-200'
               : 'bg-[#F8F8F9] text-black'
-              } hover:bg-blue-600 hover:text-white ${activeSec == 'Overview' ? `active` : ''
+              } hover:bg-blue-600 active:bg-blue-600 hover:text-white active:text-white ${activeSec == 'Overview' ? `active` : ''
               }`}
           >
             <a href='#Overview' className='p-2.5 w-full h-full'>
@@ -600,7 +600,7 @@ export default function Details() {
             className={`p-4 rounded-3xl nav-link ${dark
               ? 'bg-[#29364b] text-gray-200'
               : 'bg-[#F8F8F9] text-black'
-              } hover:bg-blue-600 hover:text-white ${activeSec == 'Course' ? `active` : ''
+              } hover:bg-blue-600 active:bg-blue-600 hover:text-white active:text-white ${activeSec == 'Course' ? `active` : ''
               }`}
           >
             <a href='#Course' className='p-2.5'>
@@ -612,7 +612,7 @@ export default function Details() {
             className={`p-4 rounded-3xl nav-link ${dark
               ? 'bg-[#29364b] text-gray-200'
               : 'bg-[#F8F8F9] text-black'
-              } hover:bg-blue-600 hover:text-white ${activeSec == 'Details' ? `active` : ''
+              } hover:bg-blue-600 active:bg-blue-600 hover:text-white active:text-white ${activeSec == 'Details' ? `active` : ''
               }`}
           >
             <a href='#Details' className='p-2.5'>
@@ -624,7 +624,7 @@ export default function Details() {
             className={`p-4 rounded-3xl nav-link ${dark
               ? 'bg-[#29364b] text-gray-200'
               : 'bg-[#F8F8F9] text-black'
-              } hover:bg-blue-600 hover:text-white ${activeSec == 'Intructor' ? `active` : ''
+              } hover:bg-blue-600 active:bg-blue-600 hover:text-white active:text-white ${activeSec == 'Intructor' ? `active` : ''
               }`}
           >
             <a href='#Intructor' className='p-2.5'>
@@ -636,7 +636,7 @@ export default function Details() {
             className={`p-4 rounded-3xl nav-link ${dark
               ? 'bg-[#29364b] text-gray-200'
               : 'bg-[#F8F8F9] text-black'
-              } hover:bg-blue-600 hover:text-white ${activeSec == 'Review' ? `active` : ''
+              } hover:bg-blue-600 active:bg-blue-600 hover:text-white active:text-white ${activeSec == 'Review' ? `active` : ''
               }`}
           >
             <a href='#Review' className='p-2.5'>
@@ -793,7 +793,7 @@ export default function Details() {
         >
           <button
             onClick={handleShowMore}
-            className={`text-sm font-semibold text-blue-600 hover:text-white hover:bg-blue-600 border-t-2 border border-blue-600 px-6 py-2 rounded-full transition-all duration-300 cursor-pointer ${dark
+            className={`text-sm font-semibold text-blue-600 hover:text-white active:text-white hover:bg-blue-600 active:bg-blue-600 border-t-2 border border-blue-600 px-6 py-2 rounded-full transition-all duration-300 cursor-pointer ${dark
               ? 'shadow-[0_4px_12px_rgba(0,0,0,0.35)]'
               : 'shadow-sm'
               }`}
@@ -1053,10 +1053,10 @@ export default function Details() {
                 className={`flex flex-row justify-center gap-1.5 pb-2.5 ${dark ? 'text-gray-400' : 'text-gray-500'
                   }`}
               >
-                <FaFacebookF className='p-2 cursor-pointer hover:text-blue-600 size-10' />
-                <LuLinkedin className='p-2 cursor-pointer hover:text-blue-600 size-10' />
-                <FaRegFaceGrinWink className='p-2 cursor-pointer hover:text-blue-600 size-10' />
-                <CiTwitter className='p-2 cursor-pointer hover:text-blue-600 size-10' />
+                <FaFacebookF className='p-2 cursor-pointer hover:text-blue-600 active:text-blue-600 size-10' />
+                <LuLinkedin className='p-2 cursor-pointer hover:text-blue-600 active:text-blue-600 size-10' />
+                <FaRegFaceGrinWink className='p-2 cursor-pointer hover:text-blue-600 active:text-blue-600 size-10' />
+                <CiTwitter className='p-2 cursor-pointer hover:text-blue-600 active:text-blue-600 size-10' />
               </div>
 
             </div>
@@ -1383,14 +1383,14 @@ export default function Details() {
               <div className='flex flex-row gap-2 pt-4'>
 
                 <BiLike
-                  className={`p-2.5 size-12 cursor-pointer hover:bg-blue-600 hover:text-white rounded-full border transition-all duration-200 ${dark
+                  className={`p-2.5 size-12 cursor-pointer hover:bg-blue-600 active:bg-blue-600 hover:text-white active:text-white rounded-full border transition-all duration-200 ${dark
                     ? 'text-gray-400 border-gray-700'
                     : 'text-gray-500 border-gray-100'
                     }`}
                 />
 
                 <BiDislike
-                  className={`p-2.5 size-12 cursor-pointer hover:bg-blue-600 hover:text-white rounded-full border transition-all duration-200 ${dark
+                  className={`p-2.5 size-12 cursor-pointer hover:bg-blue-600 active:bg-blue-600 hover:text-white active:text-white rounded-full border transition-all duration-200 ${dark
                     ? 'text-gray-400 border-gray-700'
                     : 'text-gray-500 border-gray-100'
                     }`}
@@ -1423,7 +1423,7 @@ export default function Details() {
 
             <div className='pl-4'>
 
-              <span className='text-2xl font-bold cursor-pointer transition-all duration-200 hover:text-red-600'>
+              <span className='text-2xl font-bold cursor-pointer transition-all duration-200 hover:text-red-600 active:text-red-600'>
                 Mohammad Ali
               </span>
 
@@ -1445,14 +1445,14 @@ export default function Details() {
               <div className='flex flex-row gap-2 pt-4'>
 
                 <BiLike
-                  className={`p-2.5 size-12 cursor-pointer hover:bg-blue-600 hover:text-white rounded-full border transition-all duration-200 ${dark
+                  className={`p-2.5 size-12 cursor-pointer hover:bg-blue-600 active:bg-blue-600 hover:text-white active:text-white rounded-full border transition-all duration-200 ${dark
                     ? 'text-gray-400 border-gray-700'
                     : 'text-gray-500 border-gray-100'
                     }`}
                 />
 
                 <BiDislike
-                  className={`p-2.5 size-12 cursor-pointer hover:bg-blue-600 hover:text-white rounded-full border transition-all duration-200 ${dark
+                  className={`p-2.5 size-12 cursor-pointer hover:bg-blue-600 active:bg-blue-600 hover:text-white active:text-white rounded-full border transition-all duration-200 ${dark
                     ? 'text-gray-400 border-gray-700'
                     : 'text-gray-500 border-gray-100'
                     }`}
@@ -1485,7 +1485,7 @@ export default function Details() {
 
             <div className='pl-4'>
 
-              <span className='text-2xl font-bold cursor-pointer transition-all duration-200 hover:text-red-600'>
+              <span className='text-2xl font-bold cursor-pointer transition-all duration-200 hover:text-red-600 active:text-red-600'>
                 Babor Azom
               </span>
 
@@ -1507,14 +1507,14 @@ export default function Details() {
               <div className='flex flex-row gap-2 pt-4'>
 
                 <BiLike
-                  className={`p-2.5 size-12 cursor-pointer hover:bg-blue-600 hover:text-white rounded-full border transition-all duration-200 ${dark
+                  className={`p-2.5 size-12 cursor-pointer hover:bg-blue-600 active:bg-blue-600 hover:text-white active:text-white rounded-full border transition-all duration-200 ${dark
                     ? 'text-gray-400 border-gray-700'
                     : 'text-gray-500 border-gray-100'
                     }`}
                 />
 
                 <BiDislike
-                  className={`p-2.5 size-12 cursor-pointer hover:bg-blue-600 hover:text-white rounded-full border transition-all duration-200 ${dark
+                  className={`p-2.5 size-12 cursor-pointer hover:bg-blue-600 active:bg-blue-600 hover:text-white active:text-white rounded-full border transition-all duration-200 ${dark
                     ? 'text-gray-400 border-gray-700'
                     : 'text-gray-500 border-gray-100'
                     }`}
@@ -1547,7 +1547,7 @@ export default function Details() {
 
             <div className='pl-4'>
 
-              <span className='text-2xl font-bold cursor-pointer transition-all duration-200 hover:text-red-600'>
+              <span className='text-2xl font-bold cursor-pointer transition-all duration-200 hover:text-red-600 active:text-red-600'>
                 Farjana Bawnia
               </span>
 
@@ -1569,14 +1569,14 @@ export default function Details() {
               <div className='flex flex-row gap-2 pt-4'>
 
                 <BiLike
-                  className={`p-2.5 size-12 cursor-pointer hover:bg-blue-600 hover:text-white rounded-full border transition-all duration-200 ${dark
+                  className={`p-2.5 size-12 cursor-pointer hover:bg-blue-600 active:bg-blue-600 hover:text-white active:text-white rounded-full border transition-all duration-200 ${dark
                     ? 'text-gray-400 border-gray-700'
                     : 'text-gray-500 border-gray-100'
                     }`}
                 />
 
                 <BiDislike
-                  className={`p-2.5 size-12 cursor-pointer hover:bg-blue-600 hover:text-white rounded-full border transition-all duration-200 ${dark
+                  className={`p-2.5 size-12 cursor-pointer hover:bg-blue-600 active:bg-blue-600 hover:text-white active:text-white rounded-full border transition-all duration-200 ${dark
                     ? 'text-gray-400 border-gray-700'
                     : 'text-gray-500 border-gray-100'
                     }`}

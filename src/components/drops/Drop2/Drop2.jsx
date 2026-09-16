@@ -56,7 +56,7 @@ export default function Drop2({ isHandle, setIsHandle }) {
       1. تحويل لـ fixed top-[78px] مع left-1/2 -translate-x-1/2: عشان تتسنتر تماماً في منتصف شاشة العرض بدون انحياز.
       2. الترانزيشن الشفاف الثابت: before:top-[-40px] before:h-[40px] قفل الفراغ برمجياً وبكفاءة عالية زي الكاتيجوري تماماً.
     */
-    <section className={`opacity-0 invisible group-hover/home:opacity-100 group-hover/home:visible fixed  left-1/2 -translate-x-1/2 ${dark == true ?
+    <section className={`opacity-0 invisible group-hover/home:opacity-100 group-active/home:opacity-100 group-hover/home:visible group-active/home:visible fixed  left-1/2 -translate-x-1/2 ${dark == true ?
       `bg-[#162456] text-blue-200`
       : `bg-[#F0F5FA] text-black`}
        p-6 rounded-2xl border border-amber-500 shadow-2xl lg:w-[1000px] xl:w-[1140px] max-h-[500px] overflow-y-auto z-50 transition-all duration-300 ease-in-out grid grid-cols-5 gap-6 before:absolute before:top-[-40px] before:left-0 before:w-full before:h-[40px] translate-y-11 before:content-[''] ${isHandle == true ?
@@ -70,7 +70,7 @@ export default function Drop2({ isHandle, setIsHandle }) {
         >
           {/* كارت الصورة */}
           <Link to={'/'} className={`overflow-hidden rounded-xl border border-gray-100 shadow-sm bg-white transition-all duration-300 ease-out
-                          group-hover/card:-translate-y-2 group-hover/card:shadow-lg`}>
+                          group-hover/card:-translate-y-2 group-active/card:-translate-y-2 group-hover/card:shadow-lg group-active/card:shadow-lg`}>
             <img
               src={item.img}
               alt={item.title}
@@ -80,7 +80,7 @@ export default function Drop2({ isHandle, setIsHandle }) {
 
           {/* النص أسفل الصورة (معدلناش أي حاجة في حركته) */}
           <span className="text-[13px] font-semibold text-gray-700 px-1 opacity-0 translate-y-2 transition-all duration-300 ease-out
-                           group-hover/card:opacity-100 group-hover/card:translate-y-0 group-hover/card:text-blue-400">
+                           group-hover/card:opacity-100 group-active/card:opacity-100 group-hover/card:translate-y-0 group-active/card:translate-y-0 group-hover/card:text-blue-400 group-active/card:text-blue-400">
             {item.title}
           </span>
         </div>

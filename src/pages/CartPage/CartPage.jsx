@@ -64,7 +64,7 @@ export default function CartPage() {
       <div className={`${dark ? `header-cart-dark text-amber-400` : `header-cart text-black `} p-16 flex w-full  flex-col justify-center items-center min-h-[60vh] gap-3.5  `}>
         <h1 className='text-5xl font-bold'>Cart</h1>
         <div className='flex flex-row gap-1 items-center text-sm text-gray-400 '>
-          <Link to={'/'} className=' hover:text-blue-400 transition duration-300' >Home</Link>
+          <Link to={'/'} className=' hover:text-blue-400 active:text-blue-400 transition duration-300' >Home</Link>
           <IoIosArrowForward className=' translate-y-0.5' />
           <span>Cart</span>
         </div>
@@ -236,7 +236,7 @@ export default function CartPage() {
 
                       <div className=' absolute top-1 sm:static right-1'>
                         <div className='my-1   w-full flex justify-center   '>
-                          <div className=' p-4 cursor-pointer justify-center flex bg-red-100 text-red-600 transition-all duration-400  hover:bg-red-600 hover:text-red-100 rounded-full ' onClick={() => deleteProduct(val)}
+                          <div className=' p-4 cursor-pointer justify-center flex bg-red-100 text-red-600 transition-all duration-400  hover:bg-red-600 active:bg-red-600 hover:text-red-100 active:text-red-100 active:bg-red-600 rounded-full ' onClick={() => deleteProduct(val)}
                           >
 
                             <MdClose />
@@ -258,7 +258,7 @@ export default function CartPage() {
             <button
               disabled={dis22}
               onClick={() => confirmBuying()}
-              className=' px-5 py-2.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:rounded-full disabled:bg-gray-500 disabled:text-white w-[30%] mx-auto rounded bg-green-100 text-green-600 hover:bg-green-600 hover:text-green-100 duration-300 transition-all cursor-pointer shadow-lg   '>
+              className=' px-5 py-2.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:rounded-full disabled:bg-gray-500 disabled:text-white w-[30%] mx-auto rounded bg-green-100 text-green-600 active:bg-green-600 active:text-green-100 hover:bg-green-600 active:bg-green-600 hover:text-green-100 active:text-green-100 duration-300 transition-all cursor-pointer shadow-lg   '>
               Buy Now!
             </button>
           </div>

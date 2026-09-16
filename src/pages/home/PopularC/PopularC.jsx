@@ -48,13 +48,13 @@ export default function PopularC() {
               courseData.slice(0, 3).map((course) => (
                 <div
                   key={course?.id}
-                  className="hover:-translate-y-2 transition-all cursor-pointer rounded-xl overflow-hidden  hover:shadow-md duration-300 border shadow-[0_0_2px_2px_#DCBF56] flex flex-col justify-between"
+                  className="hover:-translate-y-2 active:-translate-y-2 transition-all cursor-pointer rounded-xl overflow-hidden  hover:shadow-md active:shadow-md duration-300 border shadow-[0_0_2px_2px_#DCBF56] flex flex-col justify-between"
                 >
                   <div className="relative overflow-hidden group">
                     <img
                       src={course?.image}
                       alt={course?.title}
-                      className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-auto object-cover group-hover:scale-105 group-active:scale-105 transition-transform duration-300"
                     />
                   </div>
 
@@ -72,12 +72,12 @@ export default function PopularC() {
                          
                         </div>
 
-                        <button className=" cursor-pointer  hover:text-gray-600 transition-colors">
+                        <button className=" cursor-pointer  hover:text-gray-600 active:text-gray-600 transition-colors">
                           <FaRegBookmark className="w-4 h-4" />
                         </button>
                       </div>
 
-                      <h3 className="text-xl font-bold  mb-2 hover:text-indigo-600 cursor-pointer transition-colors">
+                      <h3 className="text-xl font-bold  mb-2 hover:text-indigo-600 active:text-indigo-600 cursor-pointer transition-colors">
                         {course?.title}
                       </h3>
 
@@ -133,9 +133,9 @@ export default function PopularC() {
                         <Link
                           to={`/Details/${course.id}`}
                           onClick={() => window.scrollTo(0, 0)}
-                          className="flex items-center gap-1 text-xs font-semibold  hover:text-amber-600 p-2 transition-colors group cursor-pointer group">
+                          className="flex items-center gap-1 text-xs font-semibold  hover:text-amber-600 active:text-amber-600 p-2 transition-colors group cursor-pointer group">
                           Learn More
-                          <FaArrowRight className="w-3 h-3 group-hover:translate-x-1  group-hover:rotate-180 group-hover:scale-110 transition-all duration-300" />
+                          <FaArrowRight className="w-3 h-3 group-hover:translate-x-1 group-active:translate-x-1  group-hover:rotate-180 group-active:rotate-180 group-hover:scale-110 group-active:scale-110 transition-all duration-300" />
                         </Link>
 
                       </div>
@@ -149,9 +149,9 @@ export default function PopularC() {
           }
 
           {/* الكارت الثاني: PHP Beginner + Advanced
-          <div className=" hover:-translate-y-2 transition-all cursor-pointer bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md  duration-300 border border-gray-100 flex flex-col justify-between">
+          <div className=" hover:-translate-y-2 active:-translate-y-2 transition-all cursor-pointer bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md active:shadow-md  duration-300 border border-gray-100 flex flex-col justify-between">
             <div className="relative overflow-hidden group">
-              <img src={course2} alt="PHP Beginner + Advanced" className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300" />
+              <img src={course2} alt="PHP Beginner + Advanced" className="w-full h-auto object-cover group-hover:scale-105 group-active:scale-105 transition-transform duration-300" />
             </div>
             <div className="p-5 flex-grow flex flex-col justify-between">
               <div>
@@ -160,11 +160,11 @@ export default function PopularC() {
                     <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
                     <span className="text-gray-500 text-xs ml-1">(15 Reviews)</span>
                   </div>
-                  <button className="text-gray-400 hover:text-gray-600 transition-colors">
+                  <button className="text-gray-400 hover:text-gray-600 active:text-gray-600 transition-colors">
                     <FaRegBookmark className="w-4 h-4" />
                   </button>
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2 hover:text-indigo-600 cursor-pointer transition-colors">
+                <h3 className="text-xl font-bold text-gray-800 mb-2 hover:text-indigo-600 active:text-indigo-600 cursor-pointer transition-colors">
                   PHP Beginner + Advanced
                 </h3>
                 <div className="flex items-center gap-4 text-xs text-gray-500 mb-3">
@@ -189,7 +189,7 @@ export default function PopularC() {
                     <span className="text-xl font-bold text-indigo-600">$60</span>
                     <span className="text-sm text-gray-400 line-through">$120</span>
                   </div>
-                  <button className="flex items-center gap-1 text-xs font-semibold text-gray-700 hover:text-indigo-600 transition-colors">
+                  <button className="flex items-center gap-1 text-xs font-semibold text-gray-700 hover:text-indigo-600 active:text-indigo-600 transition-colors">
                     <FaShoppingCart className="w-3 h-3" /> Add To Cart
                   </button>
                 </div>
@@ -198,9 +198,9 @@ export default function PopularC() {
           </div>
 
           
-          <div className="bg-white hover:-translate-y-2 transition-all rounded-xl overflow-hidden shadow-sm hover:shadow-md cursor-pointer  duration-300 border border-gray-100 flex flex-col justify-between">
+          <div className="bg-white hover:-translate-y-2 active:-translate-y-2 transition-all rounded-xl overflow-hidden shadow-sm hover:shadow-md active:shadow-md cursor-pointer  duration-300 border border-gray-100 flex flex-col justify-between">
             <div className="relative overflow-hidden group">
-              <img src={course3} alt="Angular Zero to Mastery" className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300" />
+              <img src={course3} alt="Angular Zero to Mastery" className="w-full h-auto object-cover group-hover:scale-105 group-active:scale-105 transition-transform duration-300" />
             </div>
             <div className="p-5 flex-grow flex flex-col justify-between">
               <div>
@@ -209,11 +209,11 @@ export default function PopularC() {
                     <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
                     <span className="text-gray-500 text-xs ml-1">(5 Reviews)</span>
                   </div>
-                  <button className="text-gray-400 hover:text-gray-600 transition-colors">
+                  <button className="text-gray-400 hover:text-gray-600 active:text-gray-600 transition-colors">
                     <FaRegBookmark className="w-4 h-4" />
                   </button>
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2 hover:text-indigo-600 cursor-pointer transition-colors">
+                <h3 className="text-xl font-bold text-gray-800 mb-2 hover:text-indigo-600 active:text-indigo-600 cursor-pointer transition-colors">
                   Angular Zero to Mastery
                 </h3>
                 <div className="flex items-center gap-4 text-xs text-gray-500 mb-3">
@@ -238,8 +238,8 @@ export default function PopularC() {
                     <span className="text-xl font-bold text-indigo-600">$80</span>
                     <span className="text-sm text-gray-400 line-through">$100</span>
                   </div>
-                  <button className="flex items-center gap-1 text-xs font-semibold text-gray-700 hover:text-indigo-600 transition-colors group">
-                    Learn More <FaArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                  <button className="flex items-center gap-1 text-xs font-semibold text-gray-700 hover:text-indigo-600 active:text-indigo-600 transition-colors group">
+                    Learn More <FaArrowRight className="w-3 h-3 group-hover:translate-x-1 group-active:translate-x-1 transition-transform" />
                   </button>
                 </div>
               </div>
@@ -253,9 +253,9 @@ export default function PopularC() {
         <Link
           to={'/shopcourses'}
           onClick={() => window.scrollTo(0, 0)}
-          className="bg-amber-500 hover:scale-105 cursor-pointer transition-all duration-300 text-white px-6  rounded-lg flex flex-row gap-1.5 py-5 group" >
+          className="bg-amber-500 hover:scale-105 active:scale-105 cursor-pointer transition-all duration-300 text-white px-6  rounded-lg flex flex-row gap-1.5 py-5 group" >
           View All Courses
-          <FaArrowRight className=' group-hover:rotate-180 translate-y-1.5 duration-300 transition-all ' />
+          <FaArrowRight className=' group-hover:rotate-180 group-active:rotate-180 translate-y-1.5 duration-300 transition-all ' />
         </Link>
       </div>
     </section>

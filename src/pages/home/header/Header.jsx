@@ -49,12 +49,12 @@ export default function Header() {
 
           <Link
             to={'/shopcourses'}
-            className={` cursor-pointer scale-95 hover:scale-100 
+            className={` cursor-pointer scale-95 hover:scale-100 active:scale-100 
             ${dark ?
-                `hover:bg-amber-600 bg-amber-700 `
-                : `bg-indigo-400 hover:bg-blue-500 `} group text-white font-medium px-8 py-3.5 rounded-md flex items-center gap-2 shadow-lg shadow-purple-200 duration-300 transition-all`}>
+                `hover:bg-amber-600 active:bg-amber-600 bg-amber-700 `
+                : `bg-indigo-400 hover:bg-blue-500 active:bg-blue-500 `} group text-white font-medium px-8 py-3.5 rounded-md flex items-center gap-2 shadow-lg shadow-purple-200 duration-300 transition-all`}>
             View Courses
-            <span className="text-xl rotate-0 group-hover:rotate-180 transition-all duration-300 group-hover:translate-y-1.5 group-hover:scale-110 ">→</span>
+            <span className="text-xl rotate-0 group-hover:rotate-180 group-active:rotate-180 transition-all duration-300 group-hover:translate-y-1.5 group-active:translate-y-1.5 group-hover:scale-110 group-active:scale-110 ">→</span>
           </Link>
         </div>
 

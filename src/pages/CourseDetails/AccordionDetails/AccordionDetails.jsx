@@ -108,7 +108,7 @@ export function AccordionDetails() {
           >
             {/* رأس الأكورديون */}
             <AccordionTrigger
-              className={`hover:no-underline px-5 py-4 transition-colors ${
+              className={`hover:no-underline active:no-underline px-5 py-4 transition-colors ${
                 dark
                   ? "bg-[#202c40] data-[state=open]:bg-[#29364b]"
                   : "bg-white data-[state=open]:bg-gray-50/50"
@@ -155,8 +155,8 @@ export function AccordionDetails() {
                     key={lesson.id}
                     className={`flex items-center justify-between px-6 py-3.5 transition-colors ${
                       dark
-                        ? "hover:bg-[#29364b]"
-                        : "hover:bg-gray-50/60"
+                        ? "hover:bg-[#29364b] active:bg-[#29364b]"
+                        : "hover:bg-gray-50/60 active:bg-gray-50/60"
                     }`}
                   >
 
@@ -180,7 +180,7 @@ export function AccordionDetails() {
                         />
                       )}
 
-                      <span className="font-medium hover:text-[#2f57ef] cursor-pointer transition-colors">
+                      <span className="font-medium hover:text-[#2f57ef] active:text-[#2f57ef] cursor-pointer transition-colors">
                         {lesson.title}
                       </span>
                     </div>
@@ -199,7 +199,7 @@ export function AccordionDetails() {
                       )}
 
                       {lesson.hasPreview && (
-                        <button className="flex items-center gap-1 text-[11px] font-bold text-[#2f57ef] bg-[#2f57ef]/10 hover:bg-[#2f57ef]/20 px-2.5 py-1 rounded transition-colors">
+                        <button className="flex items-center gap-1 text-[11px] font-bold text-[#2f57ef] bg-[#2f57ef]/10 hover:bg-[#2f57ef]/20 active:bg-[#2f57ef]/20 px-2.5 py-1 rounded transition-colors">
                           <Eye className="w-3 h-3" />
                           Preview
                         </button>

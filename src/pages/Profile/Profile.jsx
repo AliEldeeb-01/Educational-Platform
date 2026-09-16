@@ -67,10 +67,10 @@ export default function Profile() {
                     <span>( Learn simply and easily. )</span>
                   </span>
                 </div>
-                <Link to={'/shop'} className=' p-1 text-[16px] cursor-pointer hover:text-blue-500 duration-200 transition-all flex items-center gap-0.5 '>
+                <Link to={'/shop'} className=' p-1 text-[16px] cursor-pointer hover:text-blue-500 active:text-blue-500 duration-200 transition-all flex items-center gap-0.5 '>
                   <GoChevronRight />
                   Shop Books</Link>
-                <Link to={'/shopCourses'} className=' p-1 text-[16px] cursor-pointer hover:text-blue-500 duration-200 transition-all flex items-center gap-0.5 '>
+                <Link to={'/shopCourses'} className=' p-1 text-[16px] cursor-pointer hover:text-blue-500 active:text-blue-500 duration-200 transition-all flex items-center gap-0.5 '>
                   <GoChevronRight />
                   Shop Courses</Link>
 
@@ -113,10 +113,10 @@ export default function Profile() {
 
             {/* Social Icons Placeholder */}
             <div className="flex items-center gap-3 pt-2">
-              <a href="#facebook" className="w-8 h-8 rounded-full bg-gray-100 text-gray-600 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors text-xs font-bold">f</a>
-              <a href="#twitter" className="w-8 h-8 rounded-full bg-gray-100 text-gray-600 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors text-xs font-bold">t</a>
-              <a href="#instagram" className="w-8 h-8 rounded-full bg-gray-100 text-gray-600 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors text-xs font-bold">in</a>
-              <a href="#linkedin" className="w-8 h-8 rounded-full bg-gray-100 text-gray-600 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors text-xs font-bold">li</a>
+              <a href="#facebook" className="w-8 h-8 rounded-full bg-gray-100 text-gray-600 flex items-center justify-center hover:bg-blue-600 active:bg-blue-600 hover:text-white active:text-white transition-colors text-xs font-bold">f</a>
+              <a href="#twitter" className="w-8 h-8 rounded-full bg-gray-100 text-gray-600 flex items-center justify-center hover:bg-blue-600 active:bg-blue-600 hover:text-white active:text-white transition-colors text-xs font-bold">t</a>
+              <a href="#instagram" className="w-8 h-8 rounded-full bg-gray-100 text-gray-600 flex items-center justify-center hover:bg-blue-600 active:bg-blue-600 hover:text-white active:text-white transition-colors text-xs font-bold">in</a>
+              <a href="#linkedin" className="w-8 h-8 rounded-full bg-gray-100 text-gray-600 flex items-center justify-center hover:bg-blue-600 active:bg-blue-600 hover:text-white active:text-white transition-colors text-xs font-bold">li</a>
             </div>
 
             {/* Contact Info */}
@@ -137,7 +137,7 @@ export default function Profile() {
         <div className=' '>
           <button
             onClick={() => logOut()}
-            className=' cursor-pointer transition-all duration-300  p-5 rounded-2xl scale-95 hover:scale-100 hover:bg-red-600 hover:text-red-100 bg-red-100 text-red-600 '> Log Out</button>
+            className=' cursor-pointer transition-all duration-300  p-5 rounded-2xl scale-95 hover:scale-100 active:scale-100 hover:bg-red-600 active:bg-red-600 hover:text-red-100 active:text-red-100 bg-red-100 text-red-600 '> Log Out</button>
         </div>
 
       </div>

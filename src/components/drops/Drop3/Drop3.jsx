@@ -8,7 +8,7 @@ export default function Drop3() {
   const { dark } = useContext(DisplayContext)
   return (
 
-    <section className={`opacity-0 invisible group-hover/drop3:opacity-100 group-hover/drop3:visible absolute top-[100%] left-1/2 -translate-x-1/2 mt-[18px]
+    <section className={`opacity-0 invisible group-hover/drop3:opacity-100 group-active/drop3:opacity-100 group-hover/drop3:visible group-active/drop3:visible absolute top-[100%] left-1/2 -translate-x-1/2 mt-[18px]
        ${dark == true ?
        `bg-[#192335] text-gray-200 `
        :`bg-white text-black`} rounded-2xl border border-amber-500 shadow-2xl w-[420px] transition-all duration-300 ease-in-out flex flex-col overflow-hidden z-50 -translate-y-5`}>
@@ -44,27 +44,27 @@ export default function Drop3() {
           <div className="grid grid-cols-2 gap-x-4 gap-y-2.5 text-[13px] font-medium ">
             {/* العمود الشمال */}
             <div className="flex flex-col gap-2.5">
-              <span className="hover:text-blue-400 cursor-pointer transition-colors">Filter One Toggle</span>
-              <span className="hover:text-blue-400 cursor-pointer transition-colors">Filter One Open</span>
-              <span className="hover:text-blue-400 cursor-pointer transition-colors">Filter Two Toggle</span>
-              <span className="hover:text-blue-400 cursor-pointer transition-colors">Filter Two Open</span>
-              <span className="hover:text-blue-400 cursor-pointer transition-colors">Course With Tab</span>
-              <span className="hover:text-blue-400 cursor-pointer transition-colors">Course With Tab Two</span>
-              <span className="hover:text-blue-400 cursor-pointer transition-colors">Course Card Two</span>
+              <span className="hover:text-blue-400 active:text-blue-400 cursor-pointer transition-colors">Filter One Toggle</span>
+              <span className="hover:text-blue-400 active:text-blue-400 cursor-pointer transition-colors">Filter One Open</span>
+              <span className="hover:text-blue-400 active:text-blue-400 cursor-pointer transition-colors">Filter Two Toggle</span>
+              <span className="hover:text-blue-400 active:text-blue-400 cursor-pointer transition-colors">Filter Two Open</span>
+              <span className="hover:text-blue-400 active:text-blue-400 cursor-pointer transition-colors">Course With Tab</span>
+              <span className="hover:text-blue-400 active:text-blue-400 cursor-pointer transition-colors">Course With Tab Two</span>
+              <span className="hover:text-blue-400 active:text-blue-400 cursor-pointer transition-colors">Course Card Two</span>
             </div>
 
             {/* العمود اليمين */}
             <div className="flex flex-col gap-2.5">
-              <span className="hover:text-blue-400 cursor-pointer transition-colors">Course Card Three</span>
-              <span className="hover:text-blue-400 cursor-pointer transition-colors">Course Masonry</span>
-              <span className="hover:text-blue-400 cursor-pointer transition-colors">Course With Sidebar</span>
-              <Link to={"Details"} className="hover:text-blue-400 cursor-pointer transition-colors">Course Details</Link>
-              <span className="hover:text-blue-400 cursor-pointer transition-colors">Course Details Two</span>
-              <span className="hover:text-blue-400 cursor-pointer transition-colors flex items-center justify-between">
+              <span className="hover:text-blue-400 active:text-blue-400 cursor-pointer transition-colors">Course Card Three</span>
+              <span className="hover:text-blue-400 active:text-blue-400 cursor-pointer transition-colors">Course Masonry</span>
+              <span className="hover:text-blue-400 active:text-blue-400 cursor-pointer transition-colors">Course With Sidebar</span>
+              <Link to={"Details"} className="hover:text-blue-400 active:text-blue-400 cursor-pointer transition-colors">Course Details</Link>
+              <span className="hover:text-blue-400 active:text-blue-400 cursor-pointer transition-colors">Course Details Two</span>
+              <span className="hover:text-blue-400 active:text-blue-400 cursor-pointer transition-colors flex items-center justify-between">
                 <span>Course Lesson</span>
                 <span className="bg-purple-100 text-purple-600 text-[9px] font-bold px-1.5 py-0.5 rounded">New</span>
               </span>
-              <span className="hover:text-blue-400 cursor-pointer transition-colors flex items-center justify-between">
+              <span className="hover:text-blue-400 active:text-blue-400 cursor-pointer transition-colors flex items-center justify-between">
                 <span>Create Course</span>
                 <span className="bg-purple-100 text-purple-600 text-[9px] font-bold px-1.5 py-0.5 rounded">New</span>
               </span>
@@ -79,20 +79,20 @@ export default function Drop3() {
         <div className="grid grid-cols-2 gap-4 text-[13px] font-medium  pb-1">
           {/* الديف الصغير على الشمال */}
           <div className="flex flex-col gap-3">
-            <span className="hover:text-blue-400 cursor-pointer transition-colors flex items-center gap-2">
+            <span className="hover:text-blue-400 active:text-blue-400 cursor-pointer transition-colors flex items-center gap-2">
               📂 Quick Start Guide
             </span>
-            <span className="hover:text-blue-400 cursor-pointer transition-colors flex items-center gap-2">
+            <span className="hover:text-blue-400 active:text-blue-400 cursor-pointer transition-colors flex items-center gap-2">
               💻 API Status
             </span>
           </div>
 
           {/* الديف الصغير على اليمين */}
           <div className="flex flex-col gap-3">
-            <span className="hover:text-blue-400 cursor-pointer transition-colors flex items-center gap-2">
+            <span className="hover:text-blue-400 active:text-blue-400 cursor-pointer transition-colors flex items-center gap-2">
               📂 For Open Source
             </span>
-            <span className="hover:text-blue-400 cursor-pointer transition-colors flex items-center gap-2">
+            <span className="hover:text-blue-400 active:text-blue-400 cursor-pointer transition-colors flex items-center gap-2">
               💬 Support
             </span>
           </div>

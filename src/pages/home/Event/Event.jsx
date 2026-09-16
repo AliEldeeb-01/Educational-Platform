@@ -28,10 +28,10 @@ export default function Event() {
   return (
     <section className='h-full w-[80%] mx-auto transition-all duration-200  relative group ' >
 
-      <button className='prev absolute opacity-0  group-hover:opacity-100 transition-all duration-300 left-[2%] top-[44%] -translate-y-1/2   p-5 rounded-full z-10 bg-blue-600 text-white cursor-pointer shadow'>
+      <button className='prev absolute opacity-0  group-hover:opacity-100 group-active:opacity-100 transition-all duration-300 left-[2%] top-[44%] -translate-y-1/2   p-5 rounded-full z-10 bg-blue-600 text-white cursor-pointer shadow'>
         <MdOutlineArrowBackIosNew />
       </button>
-      <button className='next opacity-0  group-hover:opacity-100  absolute right-[2%] top-[44%] -translate-y-1/2 z-10 bg-blue-600 text-white cursor-pointer p-5 rounded-full shadow'>
+      <button className='next opacity-0  group-hover:opacity-100 group-active:opacity-100  absolute right-[2%] top-[44%] -translate-y-1/2 z-10 bg-blue-600 text-white cursor-pointer p-5 rounded-full shadow'>
         <MdOutlineArrowForwardIos />
       </button>
 
@@ -66,7 +66,7 @@ export default function Event() {
       >
 
         <SwiperSlide  >
-          <div className={` group w-full shadow-sm scale-90 hover:scale-95 shadow-amber-200 transition-all duration-300 flex flex-col items-start  rounded-lg p-7 gap-4 ${dark ?` `:`bg-indigo-400 text-white`} `}>
+          <div className={` group w-full shadow-sm scale-90 hover:scale-95 active:scale-95 shadow-amber-200 transition-all duration-300 flex flex-col items-start  rounded-lg p-7 gap-4 ${dark ?` `:`bg-indigo-400 text-white`} `}>
             <img src={grid1} className='rounded-lg' alt="" />
             <div className='opacity-70 flex flex-row gap-2 '>
               <div className=' gap-1  flex flex-row justify-center items-center'>
@@ -79,11 +79,11 @@ export default function Event() {
               </div>
             </div>
             <p className=' font-bold text-2xl'>International Education Fair 2024</p>
-            <button className='z-40 py-2 px-6 cursor-pointer hover:bg-blue-100 transition-all duration-200 hover:text-blue-600 flex flex-row items-center justify-center gap-2  border-gray-100  rounded-3xl border-2'> Get ticket <IoArrowRedo /></button>
+            <button className='z-40 py-2 px-6 cursor-pointer hover:bg-blue-100 active:bg-blue-100 transition-all duration-200 hover:text-blue-600 active:text-blue-600 flex flex-row items-center justify-center gap-2  border-gray-100  rounded-3xl border-2'> Get ticket <IoArrowRedo /></button>
           </div>
         </SwiperSlide>
         <SwiperSlide >
-          <div className={` hover:scale-[0.98] shadow-sm shadow-amber-200 scale-95 transition-all duration-300 flex flex-col items-start  rounded-lg p-7 gap-4 ${dark ?` `:`bg-indigo-400 text-white`}`}>
+          <div className={` hover:scale-[0.98] active:scale-[0.98] shadow-sm shadow-amber-200 scale-95 transition-all duration-300 flex flex-col items-start  rounded-lg p-7 gap-4 ${dark ?` `:`bg-indigo-400 text-white`}`}>
             <img src={grid4} className='rounded-lg' alt="" />
             <div className='opacity-70 flex flex-row gap-2 '>
               <div className=' gap-1  flex flex-row justify-center items-center'>
@@ -96,11 +96,11 @@ export default function Event() {
               </div>
             </div>
             <p className=' font-bold text-2xl'>Elegant Light Box Paper Cut Dioramas in</p>
-            <button className=' z-40 py-2 px-6 cursor-pointer hover:bg-blue-100 transition-all duration-200 hover:text-blue-600 flex flex-row items-center justify-center gap-2  border-gray-100  rounded-3xl border-2'> Get ticket <IoArrowRedo /></button>
+            <button className=' z-40 py-2 px-6 cursor-pointer hover:bg-blue-100 active:bg-blue-100 transition-all duration-200 hover:text-blue-600 active:text-blue-600 flex flex-row items-center justify-center gap-2  border-gray-100  rounded-3xl border-2'> Get ticket <IoArrowRedo /></button>
           </div>
         </SwiperSlide>
         <SwiperSlide >
-          <div className={` hover:scale-95 scale-90 shadow-sm shadow-amber-200 transition-all duration-300 flex flex-col items-start  rounded-lg p-7 gap-4 ${dark ?` `:`bg-indigo-400 text-white`} `}>
+          <div className={` hover:scale-95 active:scale-95 scale-90 shadow-sm shadow-amber-200 transition-all duration-300 flex flex-col items-start  rounded-lg p-7 gap-4 ${dark ?` `:`bg-indigo-400 text-white`} `}>
             <img src={grid2} className='rounded-lg' alt="" />
             <div className='opacity-70 flex flex-row gap-2 '>
               <div className=' gap-1  flex flex-row justify-center items-center'>
@@ -113,11 +113,11 @@ export default function Event() {
               </div>
             </div>
             <p className=' font-bold text-2xl'>Painting Art Contest 2020</p>
-            <button className=' z-40 py-2 px-6 cursor-pointer hover:bg-blue-100 transition-all duration-200 hover:text-blue-600 flex flex-row items-center justify-center gap-2  border-gray-100  rounded-3xl border-2'> Get ticket <IoArrowRedo /></button>
+            <button className=' z-40 py-2 px-6 cursor-pointer hover:bg-blue-100 active:bg-blue-100 transition-all duration-200 hover:text-blue-600 active:text-blue-600 flex flex-row items-center justify-center gap-2  border-gray-100  rounded-3xl border-2'> Get ticket <IoArrowRedo /></button>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className={` hover:scale-95 scale-90 shadow-sm shadow-amber-200 transition-all duration-300 flex flex-col items-start  rounded-lg p-7 gap-4 ${dark ?` `:`bg-indigo-400 text-white`}`}>
+          <div className={` hover:scale-95 active:scale-95 scale-90 shadow-sm shadow-amber-200 transition-all duration-300 flex flex-col items-start  rounded-lg p-7 gap-4 ${dark ?` `:`bg-indigo-400 text-white`}`}>
             <img src={grid3} className='rounded-lg' alt="" />
             <div className='opacity-70 flex flex-row gap-2 '>
               <div className=' gap-1  flex flex-row justify-center items-center'>
@@ -130,7 +130,7 @@ export default function Event() {
               </div>
             </div>
             <p className=' font-bold text-2xl'>Most Effective Ways for Education's Problem</p>
-            <button className='z-40 py-2 px-6 cursor-pointer hover:bg-blue-100 transition-all duration-200 hover:text-blue-600 flex flex-row items-center justify-center gap-2  border-gray-100  rounded-3xl border-2'> Get ticket <IoArrowRedo /></button>
+            <button className='z-40 py-2 px-6 cursor-pointer hover:bg-blue-100 active:bg-blue-100 transition-all duration-200 hover:text-blue-600 active:text-blue-600 flex flex-row items-center justify-center gap-2  border-gray-100  rounded-3xl border-2'> Get ticket <IoArrowRedo /></button>
           </div>
         </SwiperSlide>
 

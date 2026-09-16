@@ -92,7 +92,7 @@ export default function Register() {
         <h1 className='text-5xl font-bold text-amber-500'>Register</h1>
         <div className={`flex flex-row gap-1 items-center text-sm ${dark ? 'text-gray-400' : 'text-gray-400'
           }`}>
-          <Link to={'/'} className={`hover:text-blue-700 transition duration-200 ${dark ? 'text-gray-300' : 'text-gray-600'
+          <Link to={'/'} className={`hover:text-blue-700 active:text-blue-700 transition duration-200 ${dark ? 'text-gray-300' : 'text-gray-600'
             }`} >Home</Link>
           <IoIosArrowForward className=' translate-y-0.5' />
           <span>Register</span>
@@ -381,7 +381,7 @@ export default function Register() {
         <Link className={`my-5 mt-9 inline-block group font-semibold text-center relative ${dark ? 'text-red-400' : 'text-blue-700'}`}
         onClick={()=>window.scrollTo(0,0)}
         to={'/login'}>Already have an account...? Sign in
-          <span className={`scale-x-0 group-hover:scale-x-100 duration-400 transition h-0.5 absolute -bottom-0.5 left-0 right-0 origin-left ${dark ? 'bg-red-500' : 'bg-blue-500'}`}></span>
+          <span className={`scale-x-0 group-hover:scale-x-100 group-active:scale-x-100 duration-400 transition h-0.5 absolute -bottom-0.5 left-0 right-0 origin-left ${dark ? 'bg-red-500' : 'bg-blue-500'}`}></span>
         </Link>
 
       </div>

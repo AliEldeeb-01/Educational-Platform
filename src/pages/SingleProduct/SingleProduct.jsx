@@ -86,12 +86,20 @@ export default function SingleProduct() {
 
 
   return (
-    <section className={`transition-colors duration-200 ${dark ? 'bg-gray-900 text-gray-100' : 'bg-white text-gray-800'}`}>
-      <section className={` flex justify-center items-center pb-20 pt-52 mb-16 md:mb-40 transition-colors duration-200 ${dark ? 'bg-gray-800 header-single-dark' : 'header-single'}`} >
+    <section 
+    className={`transition-colors duration-200
+     ${dark ? 'bg-gray-900 text-gray-100' 
+     :
+      'bg-white text-gray-800'}`}>
+      <section 
+      className={` flex justify-center items-center pb-20 pt-52 mb-16 md:mb-40 transition-colors duration-200 
+      ${dark ? 'bg-gray-800 header-single-dark' 
+      :
+       'header-single'}`} >
         <div className='felx flex-col  '>
           <h1 className={`font-bold text-5xl ${dark ? 'text-gray-100' : 'text-gray-900'}`}>SingleProduct</h1>
           <div className={`flex gap-1 items-center justify-center mt-3 ${dark ? 'text-gray-400' : 'text-gray-600'}`}>
-            <Link to={'/'} className={`${dark ? 'text-gray-300 hover:text-blue-400' : 'text-gray-700 hover:text-blue-500'} duration-300 transition-all`}>Home</Link>
+            <Link to={'/'} className={`${dark ? 'text-gray-300 hover:text-blue-400 active:text-blue-400' : 'text-gray-700 hover:text-blue-500 active:text-blue-500'} duration-300 transition-all`}>Home</Link>
             <IoIosArrowForward />
             <span className={`${dark ? 'text-gray-100' : 'text-black'}`}>SingleProduct</span>
           </div>
@@ -144,13 +152,13 @@ export default function SingleProduct() {
                 className={`disabeldBtn  bg-linear-to-l from-indigo-500 via-purple-500 to-pink-500 text-white cursor-pointer px-3.5 h-full border border-gray-400  transition-all duration-100 ${(singleProductData?.amount + counter) >= singleProductData?.stock ? ` ` : `active:scale-90`} `}>+</button>
             </div>
 
-            <div className='group bg-linear-to-r transition-all w-[150px] h-[50px] duration-300  group hover:bg-linear-to-l from-indigo-500 via-purple-500 to-pink-500 flex flex-row items-center  text-white  rounded-lg cursor-pointer justify-center relative  container-Button-Add-Cart'   >
+            <div className='group bg-linear-to-r transition-all w-[150px] h-[50px] duration-300  group hover:bg-linear-to-l active:bg-linear-to-l from-indigo-500 via-purple-500 to-pink-500 flex flex-row items-center  text-white  rounded-lg cursor-pointer justify-center relative  container-Button-Add-Cart'   >
 
-              <IoArrowForward className={` text-lg transition-all duration-300 opacity-0 -translate-x-4  group-hover:opacity-100 group-hover:translate-x-0 absolute left-0.5 ${disAbledBtn && `hidden`}`} />
+              <IoArrowForward className={` text-lg transition-all duration-300 opacity-0 -translate-x-4  group-hover:opacity-100 group-active:opacity-100 group-hover:translate-x-0 group-active:translate-x-0 absolute left-0.5 ${disAbledBtn && `hidden`}`} />
               <button
                 onClick={() => handleAddToCart(singleProductData, counter)}
                 disabled={singleProductData?.amount == singleProductData.stock || disAbledBtn}
-                className={`disabeldBtn relative hover:scale-110   w-full h-full -translate-x-1.5 group-hover:translate-x-0 transition-all duration-200 cursor-pointer
+                className={`disabeldBtn relative hover:scale-110 active:scale-110   w-full h-full -translate-x-1.5 group-hover:translate-x-0 group-active:translate-x-0 transition-all duration-200 cursor-pointer
                  `}>
                 <div className='flex flex-row items-center gap-2 justify-around w-full  '>
                   {disAbledBtn ?
@@ -161,7 +169,7 @@ export default function SingleProduct() {
                     : <span>Add To Cart</span>}
                 </div>
               </button>
-              <IoArrowForward className={`transition-all absolute right-0.5 text-lg duration-300 opacity-100 translate-x-0 group-hover:opacity-0 group-hover:translate-x-4 ${disAbledBtn && `hidden`}`} />
+              <IoArrowForward className={`transition-all absolute right-0.5 text-lg duration-300 opacity-100 translate-x-0 group-hover:opacity-0 group-active:opacity-0 group-hover:translate-x-4 group-active:translate-x-4 ${disAbledBtn && `hidden`}`} />
             </div>
           </div>
           <div className={`flex items-center amount-add ${dark ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -171,16 +179,18 @@ export default function SingleProduct() {
           <div className='flex flex-col gap-3.5 text-lg '>
             <div>
               <b className={dark ? 'text-gray-200' : 'text-gray-900'}>SKU :</b>
-              <span className={`ml-1 duration-200 transition-all cursor-pointer NumberOfBook ${dark ? 'text-gray-400 hover:text-blue-400' : 'text-gray-600 hover:text-blue-600'}`}>{singleProductData?.category}</span>
+              <span className={`ml-1 duration-200 transition-all cursor-pointer NumberOfBook ${dark ? 'text-gray-400 hover:text-blue-400 active:text-blue-400' : 'text-gray-600 hover:text-blue-600 active:text-blue-600'}`}>{singleProductData?.category}</span>
             </div>
             <div>
               <b className={dark ? 'text-gray-200' : 'text-gray-900'}>Categories :</b>
-              <span className={`ml-1 duration-200 transition-all cursor-pointer TypeOfBook ${dark ? 'text-gray-400 hover:text-blue-400' : 'text-gray-600 hover:text-blue-600'}`}>Motivation</span>
+              <span className={`ml-1 duration-200 transition-all cursor-pointer TypeOfBook ${dark ? 'text-gray-400 hover:text-blue-400 active:text-blue-400' : 'text-gray-600 hover:text-blue-600 active:text-blue-600'}`}>Motivation</span>
             </div>
             <div>
               <b className={dark ? 'text-gray-200' : 'text-gray-900'}>Tag :</b>
-              <span className=' ml-1  TypeOfBook'>
-                <span className={`duration-400 transition-all cursor-pointer ${dark ? 'text-gray-400 hover:text-blue-400' : 'text-gray-600 hover:text-blue-600'}`}>{singleProductData?.tag}</span>
+              <span className='ml-1 TypeOfBook'>
+                <span className={`duration-400 transition-all cursor-pointer ${dark ? 'text-gray-400 hover:text-blue-400 active:text-blue-400' : 'text-gray-600 hover:text-blue-600 active:text-blue-600'}`}>
+                  {singleProductData?.tag}
+                </span>
               </span>
             </div>
           </div>

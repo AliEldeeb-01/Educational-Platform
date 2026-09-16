@@ -86,43 +86,43 @@ export default function Navbar() {
             <Drop1 />
           </span>
 
-          <span className='flex flex-row justify-between items-center hover:text-blue-600 cursor-pointer lg:text-[14px] xl:text-base transition-all duration-200 group/home relative h-full py-10'>
-            Home<MdKeyboardArrowDown className=' group-hover/home:rotate-180 transition-all duration-300' />
+          <span className='flex flex-row justify-between items-center hover:text-blue-600 active:text-blue-600 cursor-pointer lg:text-[14px] xl:text-base transition-all duration-200 group/home relative h-full py-10'>
+            Home<MdKeyboardArrowDown className=' group-hover/home:rotate-180 group-active/home:rotate-180 transition-all duration-300' />
             <Drop2 isHandle={isHandle} setIsHandle={setIsHandle} />
           </span>
 
-          <span className='flex flex-row justify-center items-center hover:text-blue-400 cursor-pointer group/drop3 relative lg:text-[14px] xl:text-base py-7.5 transition-all duration-200'>
-            Courses<MdKeyboardArrowDown className=' group-hover/drop3:rotate-180 transition-all duration-300' />
+          <span className='flex flex-row justify-center items-center hover:text-blue-400 active:text-blue-400 cursor-pointer group/drop3 relative lg:text-[14px] xl:text-base py-7.5 transition-all duration-200'>
+            Courses<MdKeyboardArrowDown className=' group-hover/drop3:rotate-180 group-active/drop3:rotate-180 transition-all duration-300' />
             <Drop3 />
           </span>
 
-          <span className='flex flex-row justify-between items-center hover:text-blue-600 cursor-pointer py-7.5 lg:text-[14px] xl:text-base group/drop4 relative transition-all duration-200'>
-            Dashboard<MdKeyboardArrowDown className=' group-hover/drop4:rotate-180 transition-all duration-300' />
+          <span className='flex flex-row justify-between items-center hover:text-blue-600 active:text-blue-600 cursor-pointer py-7.5 lg:text-[14px] xl:text-base group/drop4 relative transition-all duration-200'>
+            Dashboard<MdKeyboardArrowDown className=' group-hover/drop4:rotate-180 group-active/drop4:rotate-180 transition-all duration-300' />
             <Drop4 />
           </span>
 
-          <span className='flex flex-row justify-between items-center hover:text-blue-600 cursor-pointer py-7.5 lg:text-[14px] xl:text-base transition-all duration-200 group/drop5 relative'>
-            Pages<MdKeyboardArrowDown className=' group-hover/drop5:rotate-180 transition-all duration-300' />
+          <span className='flex flex-row justify-between items-center hover:text-blue-600 active:text-blue-600 cursor-pointer py-7.5 lg:text-[14px] xl:text-base transition-all duration-200 group/drop5 relative'>
+            Pages<MdKeyboardArrowDown className=' group-hover/drop5:rotate-180 group-active/drop5:rotate-180 transition-all duration-300' />
             <Drop5 />
           </span>
 
-          <span className='flex flex-row justify-between items-center hover:text-blue-600 cursor-pointer lg:text-[14px] xl:text-base transition-all duration-200 group/drop6 relative'>
-            Element<MdKeyboardArrowDown className=' group-hover/drop6:rotate-180 transition-all duration-300' />
+          <span className='flex flex-row justify-between items-center hover:text-blue-600 active:text-blue-600 cursor-pointer lg:text-[14px] xl:text-base transition-all duration-200 group/drop6 relative'>
+            Element<MdKeyboardArrowDown className=' group-hover/drop6:rotate-180 group-active/drop6:rotate-180 transition-all duration-300' />
             <Drop6 />
           </span>
 
-          <span className='flex flex-row justify-between items-center hover:text-blue-600 cursor-pointer py-7.5 lg:text-[14px] xl:text-base transition-all duration-200 group/drop7 relative'>
-            Blog<MdKeyboardArrowDown className=' group-hover/drop7:rotate-180 transition-all duration-300' />
+          <span className='flex flex-row justify-between items-center hover:text-blue-600 active:text-blue-600 cursor-pointer py-7.5 lg:text-[14px] xl:text-base transition-all duration-200 group/drop7 relative'>
+            Blog<MdKeyboardArrowDown className=' group-hover/drop7:rotate-180 group-active/drop7:rotate-180 transition-all duration-300' />
             <Drop7 />
           </span>
         </div>
 
         <div className='hidden sm:hidden md:hidden lg:flex flex-row justify-between items-center gap-2 pr-1'>
-          <CiSearch className={` size-9 cursor-pointer transition-all duration-300 hover:transition-all p-2 hover:text-white hover:bg-gradient-to-r from-fuchsia-500 to-cyan-500 rounded-full sm:flex hidden `} />
+          <CiSearch className={` size-9 cursor-pointer transition-all duration-300 hover:transition-all active:transition-all p-2 hover:text-white active:text-white hover:bg-gradient-to-r active:bg-gradient-to-r from-fuchsia-500 to-cyan-500 rounded-full sm:flex hidden `} />
           <span className=' relative'>
             <CiShoppingCart
               onClick={() => Navigate('/cartPage')}
-              className=' size-9 cursor-pointer transition duration-200 p-2 lg:mr-2 hover:text-white hover:bg-gradient-to-r from-fuchsia-500 to-cyan-500 rounded-full ' />
+              className=' size-9 cursor-pointer transition duration-200 p-2 lg:mr-2 hover:text-white active:text-white hover:bg-gradient-to-r active:bg-gradient-to-r from-fuchsia-500 to-cyan-500 rounded-full ' />
             <span className=" absolute top-0 -right-1 bg-blue-700 text-white rounded-full
              flex text-center size-4 overflow-hidden items-center text-sm justify-center p-0.5 lg:mr-2"> {NUM} </span>
           </span>
@@ -131,16 +131,16 @@ export default function Navbar() {
 
         <div className='flex flex-row gap-[1px] justify-between items-center '>
           <div className='flex flex-row gap-[1px] justify-center items-center cursor-pointer rounded-2xl transition-all duration-200 '>
-            <CiSearch className=' size-9 cursor-pointer transition duration-200 p-2 hover:text-blue-500 hover:bg-[#e1e1e1] rounded-full lg:hidden sm:flex hidden ' />
+            <CiSearch className=' size-9 cursor-pointer transition duration-200 p-2 hover:text-blue-500 active:text-blue-500 hover:bg-[#e1e1e1] active:bg-[#e1e1e1] rounded-full lg:hidden sm:flex hidden ' />
             <span className='relative'>
               <CiShoppingCart
                 onClick={() => Navigate('/cartPage')}
-                className=' size-9 cursor-pointer transition duration-200 p-2 hover:text-blue-500 hover:bg-[#e1e1e1] rounded-full lg:hidden block ' />
+                className=' size-9 cursor-pointer transition duration-200 p-2 hover:text-blue-500 active:text-blue-500 hover:bg-[#e1e1e1] active:bg-[#e1e1e1] rounded-full lg:hidden block ' />
               <span className=" lg:hidden absolute top-0 -right-1 bg-blue-700 text-white rounded-full flex text-center size-4 overflow-hidden items-center text-sm justify-center p-0.5"> {NUM} </span>
             </span>
 
             <UserDropdown />
-            <CiMenuBurger className='lg:hidden flex hover:text-blue-600 hover:bg-gray-100 text-[35px] p-1.5 rounded-full' onClick={() => setIsMenuOpen(true)} />
+            <CiMenuBurger className='lg:hidden flex hover:text-blue-600 active:text-blue-600 hover:bg-gray-100 active:bg-gray-100 text-[35px] p-1.5 rounded-full' onClick={() => setIsMenuOpen(true)} />
           </div>
 
           <div className='hidden sm:hidden md:hidden xl:flex p-[1px] rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 cursor-pointer transition-all duration-200 mr-2 '>

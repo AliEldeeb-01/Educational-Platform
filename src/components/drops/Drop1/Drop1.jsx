@@ -9,7 +9,7 @@ export default function Drop1() {
 
     <section
       className={`
-        hidden group-hover/drop1:flex flex-row
+        hidden group-hover/drop1:flex group-active/drop1:flex flex-row
         absolute top-full left-0
         rounded-xl shadow-2xl
         min-w-[650px]
@@ -62,8 +62,8 @@ export default function Drop1() {
             transition
 
             ${dark
-              ? 'text-gray-300 hover:bg-[#253545] hover:text-blue-400'
-              : 'text-gray-600 hover:bg-blue-50 hover:text-blue-600'
+              ? 'text-gray-300 hover:bg-[#253545] active:bg-[#253545] hover:text-blue-400 active:text-blue-400'
+              : 'text-gray-600 hover:bg-blue-50 active:bg-blue-50 hover:text-blue-600 active:text-blue-600'
             }
           `}
         >
@@ -83,8 +83,8 @@ export default function Drop1() {
             transition
 
             ${dark
-              ? 'text-gray-300 hover:bg-[#253545] hover:text-blue-400'
-              : 'text-gray-600 hover:bg-blue-50 hover:text-blue-600'
+              ? 'text-gray-300 hover:bg-[#253545] active:bg-[#253545] hover:text-blue-400 active:text-blue-400'
+              : 'text-gray-600 hover:bg-blue-50 active:bg-blue-50 hover:text-blue-600 active:text-blue-600'
             }
           `}
         >
@@ -104,8 +104,8 @@ export default function Drop1() {
             transition
 
             ${dark
-              ? 'text-gray-300 hover:bg-[#253545] hover:text-pink-400'
-              : 'text-gray-600 hover:bg-blue-50 hover:text-blue-600'
+              ? 'text-gray-300 hover:bg-[#253545] active:bg-[#253545] hover:text-pink-400 active:text-pink-400'
+              : 'text-gray-600 hover:bg-blue-50 active:bg-blue-50 hover:text-blue-600 active:text-blue-600'
             }
           `}
         >
@@ -125,8 +125,8 @@ export default function Drop1() {
             transition
 
             ${dark
-              ? 'text-gray-300 hover:bg-[#253545] hover:text-emerald-400'
-              : 'text-gray-600 hover:bg-blue-50 hover:text-blue-600'
+              ? 'text-gray-300 hover:bg-[#253545] active:bg-[#253545] hover:text-emerald-400 active:text-emerald-400'
+              : 'text-gray-600 hover:bg-blue-50 active:bg-blue-50 hover:text-blue-600 active:text-blue-600'
             }
           `}
         >
@@ -187,8 +187,8 @@ export default function Drop1() {
               className={`
                 text-sm font-medium cursor-pointer transition-colors
                 ${dark
-                  ? 'text-gray-300 hover:text-blue-400'
-                  : 'text-gray-700 hover:text-blue-600'
+                  ? 'text-gray-300 hover:text-blue-400 active:text-blue-400'
+                  : 'text-gray-700 hover:text-blue-600 active:text-blue-600'
                 }
               `}
             >
@@ -199,8 +199,8 @@ export default function Drop1() {
               className={`
                 text-sm font-medium cursor-pointer transition-colors
                 ${dark
-                  ? 'text-gray-300 hover:text-blue-400'
-                  : 'text-gray-700 hover:text-blue-600'
+                  ? 'text-gray-300 hover:text-blue-400 active:text-blue-400'
+                  : 'text-gray-700 hover:text-blue-600 active:text-blue-600'
                 }
               `}
             >
@@ -216,8 +216,8 @@ export default function Drop1() {
               className={`
                 text-sm font-medium cursor-pointer transition-colors
                 ${dark
-                  ? 'text-gray-300 hover:text-blue-400'
-                  : 'text-gray-700 hover:text-blue-600'
+                  ? 'text-gray-300 hover:text-blue-400 active:text-blue-400'
+                  : 'text-gray-700 hover:text-blue-600 active:text-blue-600'
                 }
               `}
             >
@@ -228,8 +228,8 @@ export default function Drop1() {
               className={`
                 text-sm font-medium cursor-pointer transition-colors
                 ${dark
-                  ? 'text-gray-300 hover:text-blue-400'
-                  : 'text-gray-700 hover:text-blue-600'
+                  ? 'text-gray-300 hover:text-blue-400 active:text-blue-400'
+                  : 'text-gray-700 hover:text-blue-600 active:text-blue-600'
                 }
               `}
             >
@@ -270,8 +270,8 @@ export default function Drop1() {
               className={`
                 text-sm font-medium cursor-pointer transition-colors
                 ${dark
-                  ? 'text-gray-300 hover:text-purple-400'
-                  : 'text-gray-700 hover:text-purple-600'
+                  ? 'text-gray-300 hover:text-purple-400 active:text-purple-400'
+                  : 'text-gray-700 hover:text-purple-600 active:text-purple-600'
                 }
               `}
             >
@@ -282,8 +282,8 @@ export default function Drop1() {
               className={`
                 text-sm font-medium cursor-pointer transition-colors
                 ${dark
-                  ? 'text-gray-300 hover:text-purple-400'
-                  : 'text-gray-700 hover:text-purple-600'
+                  ? 'text-gray-300 hover:text-purple-400 active:text-purple-400'
+                  : 'text-gray-700 hover:text-purple-600 active:text-purple-600'
                 }
               `}
             >
@@ -324,8 +324,8 @@ export default function Drop1() {
               className={`
                 text-sm font-medium cursor-pointer transition-colors
                 ${dark
-                  ? 'text-gray-300 hover:text-pink-400'
-                  : 'text-gray-700 hover:text-pink-600'
+                  ? 'text-gray-300 hover:text-pink-400 active:text-pink-400'
+                  : 'text-gray-700 hover:text-pink-600 active:text-pink-600'
                 }
               `}
             >
@@ -336,8 +336,8 @@ export default function Drop1() {
               className={`
                 text-sm font-medium cursor-pointer transition-colors
                 ${dark
-                  ? 'text-gray-300 hover:text-pink-400'
-                  : 'text-gray-700 hover:text-pink-600'
+                  ? 'text-gray-300 hover:text-pink-400 active:text-pink-400'
+                  : 'text-gray-700 hover:text-pink-600 active:text-pink-600'
                 }
               `}
             >
@@ -378,8 +378,8 @@ export default function Drop1() {
               className={`
                 text-sm font-medium cursor-pointer transition-colors
                 ${dark
-                  ? 'text-gray-300 hover:text-emerald-400'
-                  : 'text-gray-700 hover:text-emerald-600'
+                  ? 'text-gray-300 hover:text-emerald-400 active:text-emerald-400'
+                  : 'text-gray-700 hover:text-emerald-600 active:text-emerald-600'
                 }
               `}
             >
@@ -390,8 +390,8 @@ export default function Drop1() {
               className={`
                 text-sm font-medium cursor-pointer transition-colors
                 ${dark
-                  ? 'text-gray-300 hover:text-emerald-400'
-                  : 'text-gray-700 hover:text-emerald-600'
+                  ? 'text-gray-300 hover:text-emerald-400 active:text-emerald-400'
+                  : 'text-gray-700 hover:text-emerald-600 active:text-emerald-600'
                 }
               `}
             >

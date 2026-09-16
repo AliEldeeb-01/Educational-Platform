@@ -50,7 +50,7 @@ export default function About() {
                 Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
               </span>
               
-              <div className='p-5 transition duration-300 rounded-[10px] flex flex-row gap-3 hover:scale-105 hover:bg-amber-700/20 mt-4'>
+              <div className='p-5 transition duration-300 rounded-[10px] flex flex-row gap-3 hover:scale-105 active:scale-105 hover:bg-amber-700/20 active:bg-amber-700/20 mt-4'>
                 <div><FaHeartbeat className='text-5xl bg-red-100 text-red-600 rounded-full p-2.5' /></div>
                 <div className='flex flex-col gap-2'>
                   <span className='text-[18px] font-bold'>Flexible Classes</span>
@@ -58,7 +58,7 @@ export default function About() {
                 </div>
               </div>
 
-              <div className='p-5 transition duration-300 rounded-[10px] flex flex-row gap-3 hover:scale-105 hover:bg-amber-700/20'>
+              <div className='p-5 transition duration-300 rounded-[10px] flex flex-row gap-3 hover:scale-105 active:scale-105 hover:bg-amber-700/20 active:bg-amber-700/20'>
                 <div><FaBookAtlas className=' text-shadow-black text-blue-600 rounded-2xl opacity-75 p-2.5 text-5xl' /></div>
                 <div className='flex flex-col gap-2'>
                   <span className='text-[18px] font-bold'>Learn From Anywhere</span>
@@ -67,9 +67,9 @@ export default function About() {
               </div>
 
               <div className='w-full flex justify-start items-center h-36'>
-                <button className="bg-gradient-to-l from-blue-500 to-purple-600 hover:scale-105 cursor-pointer transition-all duration-300 text-white px-6 rounded-lg flex flex-row items-center gap-2 py-4 group font-medium" >
+                <button className="bg-gradient-to-l from-blue-500 to-purple-600 hover:scale-105 active:scale-105 cursor-pointer transition-all duration-300 text-white px-6 rounded-lg flex flex-row items-center gap-2 py-4 group font-medium" >
                   <span>More About Us</span>
-                  <FaArrowRight className='group-hover:rotate-180 transition-all duration-300' />
+                  <FaArrowRight className='group-hover:rotate-180 group-active:rotate-180 transition-all duration-300' />
                 </button>
               </div>
             </div>

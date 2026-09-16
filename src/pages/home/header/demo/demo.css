@@ -1,4 +1,5 @@
-.dad-drob:hover .drob{
+.dad-drob:hover .drob,
+.dad-drob:active .drob{
 height: 100%;
 opacity: 1;
 

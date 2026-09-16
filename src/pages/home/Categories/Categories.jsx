@@ -51,17 +51,17 @@ export default function Categories() {
           <div
             key={idx}
             onClick={() => handleNavigate('/shopCourses')}
-            className="group flex flex-col justify-center items-center p-8 rounded-xl shadow-[0_0_2px_2px_#FDD95C] border border-gray-100/50 cursor-pointer transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-[0_0_5px_5px_#FDD95C]">
-            <div className="mb-4 p-4 rounded-lg bg-white transition-colors duration-300 group-hover:bg-blue-50/50">
+            className="group flex flex-col justify-center items-center p-8 rounded-xl shadow-[0_0_2px_2px_#FDD95C] border border-gray-100/50 cursor-pointer transition-all duration-300 ease-in-out hover:-translate-y-2 active:-translate-y-2 hover:shadow-[0_0_5px_5px_#FDD95C] active:shadow-[0_0_5px_5px_#FDD95C]">
+            <div className="mb-4 p-4 rounded-lg bg-white transition-colors duration-300 group-hover:bg-blue-50/50 group-active:bg-blue-50/50">
               <img src={cat.img} className="w-[100px] h-[100px] object-contain" alt={cat.title} />
             </div>
-            <h3 className="font-bold text-[18px] mb-3 text-center transition-colors duration-300 group-hover:text-blue-600">
+            <h3 className="font-bold text-[18px] mb-3 text-center transition-colors duration-300 group-hover:text-blue-600 group-active:text-blue-600">
               {cat.title}
             </h3>
-            <span className="relative flex items-center gap-2 text-sm font-medium text-gray-500 pb-1 transition-all duration-300 group-hover:text-blue-600">
+            <span className="relative flex items-center gap-2 text-sm font-medium text-gray-500 pb-1 transition-all duration-300 group-hover:text-blue-600 group-active:text-blue-600">
               <span>{cat.count} Courses</span>
-              <FaArrowRight className="text-xs transition-transform duration-300 group-hover:translate-x-1" />
-              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+              <FaArrowRight className="text-xs transition-transform duration-300 group-hover:translate-x-1 group-active:translate-x-1" />
+              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-full group-active:w-full"></span>
             </span>
           </div>
         ))}

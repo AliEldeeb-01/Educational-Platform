@@ -74,7 +74,7 @@ export default function Count() {
 
               {/* ------------------- الكارت الأول ------------------- */}
               <div className="  -translate-y-5 relative flex flex-col items-center group">
-                <div className="w-full shadow-[0_0_2px_2px_#DCBF56] rounded-xl p-8 pt-12 border border-gray-100/70 flex flex-col items-center text-center relative overflow-hidden transition-all duration-300 hover:translate-y-[-4px] hover:shadow-[0_15px_35px_rgba(0,0,0,0.06)] z-20 min-h-[280px]">
+                <div className="w-full shadow-[0_0_2px_2px_#DCBF56] rounded-xl p-8 pt-12 border border-gray-100/70 flex flex-col items-center text-center relative overflow-hidden transition-all duration-300 hover:translate-y-[-4px] active:translate-y-[-4px] hover:shadow-[0_15px_35px_rgba(0,0,0,0.06)] active:shadow-[0_15px_35px_rgba(0,0,0,0.06)] z-20 min-h-[280px]">
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 w-36 h-18 border-b border-dashed border-gray-200/80 rounded-b-full bg-[#F5F5F9]/60 z-0"></div>
                   <div className="relative z-10 w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-sm border border-gray-50/60 mb-6">
                     <img src={counter1} alt="Learners & counting" className="w-11 h-11 object-contain" />
@@ -89,7 +89,7 @@ export default function Count() {
 
               {/* ------------------- الكارت الثاني ------------------- */}
               <div className=" relative flex flex-col items-center group">
-                <div className="w-full shadow-[0_0_2px_2px_#DCBF56] rounded-xl p-8 pt-12  border border-gray-100/70 flex flex-col items-center text-center relative overflow-hidden transition-all duration-300 hover:translate-y-[-4px] hover:shadow-[0_15px_35px_rgba(0,0,0,0.06)] z-20 min-h-[280px]">
+                <div className="w-full shadow-[0_0_2px_2px_#DCBF56] rounded-xl p-8 pt-12  border border-gray-100/70 flex flex-col items-center text-center relative overflow-hidden transition-all duration-300 hover:translate-y-[-4px] active:translate-y-[-4px] hover:shadow-[0_15px_35px_rgba(0,0,0,0.06)] active:shadow-[0_15px_35px_rgba(0,0,0,0.06)] z-20 min-h-[280px]">
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 w-36 h-18 border-b border-dashed border-gray-200/80 rounded-b-full bg-[#F5F5F9]/60 z-0"></div>
                   <div className="relative z-10 w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-sm border border-gray-50/60 mb-6">
                     <img src={counter2} alt="Courses & Video" className="w-11 h-11 object-contain" />
@@ -104,7 +104,7 @@ export default function Count() {
 
               {/* ------------------- الكارت الثالث ------------------- */}
               <div className=" -translate-y-5 relative flex flex-col items-center group">
-                <div className="w-full  rounded-xl p-8 pt-12 shadow-[0_0_2px_2px_#DCBF56] border border-gray-100/70 flex flex-col items-center text-center relative overflow-hidden transition-all duration-300 hover:translate-y-[-4px] hover:shadow-[0_15px_35px_rgba(0,0,0,0.06)] z-20 min-h-[280px]">
+                <div className="w-full  rounded-xl p-8 pt-12 shadow-[0_0_2px_2px_#DCBF56] border border-gray-100/70 flex flex-col items-center text-center relative overflow-hidden transition-all duration-300 hover:translate-y-[-4px] active:translate-y-[-4px] hover:shadow-[0_15px_35px_rgba(0,0,0,0.06)] active:shadow-[0_15px_35px_rgba(0,0,0,0.06)] z-20 min-h-[280px]">
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 w-36 h-18 border-b border-dashed border-gray-200/80 rounded-b-full bg-[#F5F5F9]/60 z-0"></div>
                   <div className="relative z-10 w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-sm border border-gray-50/60 mb-6">
                     <img src={counter3} alt="Certified Students" className="w-11 h-11 object-contain" />
@@ -117,7 +117,7 @@ export default function Count() {
 
               {/* ------------------- الكارت الرابع ------------------- */}
               <div className="sh relative flex flex-col items-center group">
-                <div className="w-full shadow-[0_0_2px_2px_#DCBF56]  rounded-xl p-8 pt-12  border border-gray-100/70 flex flex-col items-center text-center relative overflow-hidden transition-all duration-300 hover:translate-y-[-4px] hover:shadow-[0_15px_35px_rgba(0,0,0,0.06)] z-20 min-h-[280px]">
+                <div className="w-full shadow-[0_0_2px_2px_#DCBF56]  rounded-xl p-8 pt-12  border border-gray-100/70 flex flex-col items-center text-center relative overflow-hidden transition-all duration-300 hover:translate-y-[-4px] active:translate-y-[-4px] hover:shadow-[0_15px_35px_rgba(0,0,0,0.06)] active:shadow-[0_15px_35px_rgba(0,0,0,0.06)] z-20 min-h-[280px]">
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 w-36 h-18 border-b border-dashed border-gray-200/80 rounded-b-full bg-[#F5F5F9]/60 z-0"></div>
                   <div className="relative z-10 w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-sm border border-gray-50/60 mb-6">
                     <img src={counter4} alt="Registered Enrolls" className="w-11 h-11 object-contain" />

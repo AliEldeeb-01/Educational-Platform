@@ -53,13 +53,13 @@ export default function OurTech() {
 
               {/* أيقونات التواصل الاجتماعي */}
               <div className="flex gap-3 mb-8">
-                <a href="#" className="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 hover:bg-[#525fe1] hover:text-white transition-all">
+                <a href="#" className="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 hover:bg-[#525fe1] active:bg-[#525fe1] hover:text-white active:text-white transition-all">
                   <FaFacebookF size={14} />
                 </a>
-                <a href="#" className="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 hover:bg-[#525fe1] hover:text-white transition-all">
+                <a href="#" className="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 hover:bg-[#525fe1] active:bg-[#525fe1] hover:text-white active:text-white transition-all">
                   <FaTwitter size={14} />
                 </a>
-                <a href="#" className="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 hover:bg-[#525fe1] hover:text-white transition-all">
+                <a href="#" className="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 hover:bg-[#525fe1] active:bg-[#525fe1] hover:text-white active:text-white transition-all">
                   <FaInstagram size={14} />
                 </a>
               </div>

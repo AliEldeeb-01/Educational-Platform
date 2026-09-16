@@ -89,7 +89,7 @@ export default function CoursesData() {
       }`}>
         <div className=' flex flex-col gap-6'>
           <div className={`flex flex-row gap-1 text-sm items-center ${dark ? 'text-gray-400' : 'text-gray-400'}`}>
-            <Link to={'/'} className={`cursor-pointer hover:text-blue-600 transition-all duration-200 ${
+            <Link to={'/'} className={`cursor-pointer hover:text-blue-600 active:text-blue-600 transition-all duration-200 ${
               dark ? 'text-gray-400' : 'text-gray-500'
             }`} >
               Home
@@ -164,13 +164,13 @@ export default function CoursesData() {
                   </div>
 
                   <div className='group bg-linear-to-r transition-all 
-                                  w-[150px] h-[50px]  duration-300  group hover:bg-linear-to-l from-indigo-500 via-purple-500 to-pink-500 flex flex-row items-center  text-white  rounded-lg cursor-pointer justify-center relative'
+                                  w-[150px] h-[50px]  duration-300  group hover:bg-linear-to-l active:bg-linear-to-l from-indigo-500 via-purple-500 to-pink-500 flex flex-row items-center  text-white  rounded-lg cursor-pointer justify-center relative'
                   >
 
-                    <IoArrowForward className={` text-lg transition-all duration-300 opacity-0 -translate-x-4  group-hover:opacity-100 group-hover:translate-x-0 absolute left-0.5 ${isDisabeldBtn === null ? '' : isDisabeldBtn === val.id ? `hidden` : ''} `} />
+                    <IoArrowForward className={` text-lg transition-all duration-300 opacity-0 -translate-x-4  group-hover:opacity-100 group-active:opacity-100 group-hover:translate-x-0 group-active:translate-x-0 absolute left-0.5 ${isDisabeldBtn === null ? '' : isDisabeldBtn === val.id ? `hidden` : ''} `} />
                     <button
                       disabled={cartIdes[val.id] == 1}
-                      className={`disabeldBtn relative w-full h-full -translate-x-1.5 group-hover:translate-x-0 transition-all duration-200 cursor-pointer hover:scale-110  `}
+                      className={`disabeldBtn relative w-full h-full -translate-x-1.5 group-hover:translate-x-0 group-active:translate-x-0 transition-all duration-200 cursor-pointer hover:scale-110 active:scale-110  `}
                       onClick={() => handleAddToCart(val)}
                     >
                       {/* لو بتساوي الحالة الافتراضيه هتخليها زي ماهي وال 
@@ -191,7 +191,7 @@ export default function CoursesData() {
 
                     </button>
 
-                    <IoArrowForward className={`transition-all absolute right-0.5 text-lg duration-300 opacity-100 translate-x-0 group-hover:opacity-0 group-hover:translate-x-4
+                    <IoArrowForward className={`transition-all absolute right-0.5 text-lg duration-300 opacity-100 translate-x-0 group-hover:opacity-0 group-active:opacity-0 group-hover:translate-x-4 group-active:translate-x-4
                                            ${isDisabeldBtn === null ? '' : isDisabeldBtn === val.id ? `hidden` : ''}`} />
 
                   </div>

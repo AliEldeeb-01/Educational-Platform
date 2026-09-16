@@ -50,7 +50,7 @@ export default function NavAcc({ isMenuOpen, setIsMenuOpen }) {
 
             <img src={imagg} className=' w-32 h-fit' alt="" />
             <span>
-              <MdClose onClick={() => setIsMenuOpen(false)} className={` p-2 rounded-full  cursor-pointer size-10 transition-all duration-400 ${dark ? `bg-red-600 text-red-200 hover:bg-red-200 hover:text-red-600` : `bg-red-200 text-red-600 hover:bg-red-600 hover:text-red-200`}  `} />
+              <MdClose onClick={() => setIsMenuOpen(false)} className={` p-2 rounded-full  cursor-pointer size-10 transition-all duration-400 ${dark ? `bg-red-600 text-red-200 hover:bg-red-200 active:bg-red-200 hover:text-red-600 active:text-red-600` : `bg-red-200 text-red-600 hover:bg-red-600 active:bg-red-600 hover:text-red-200 active:text-red-200`}  `} />
             </span>
           </div>
         </div>
@@ -60,11 +60,11 @@ export default function NavAcc({ isMenuOpen, setIsMenuOpen }) {
             <p>Histudy is a education website template. You can customize all.</p>
           </div>
           <div className='flex flex-col md:flex-row opacity-100 gap-1.5  '>
-            <a className=' cursor-pointer  hover:opacity-100 hover:text-blue-800 flex flex-row items-center justify-center gap-0.5 transition-all duration-200 '>
+            <a className=' cursor-pointer  hover:opacity-100 active:opacity-100 hover:text-blue-800 active:text-blue-800 flex flex-row items-center justify-center gap-0.5 transition-all duration-200 '>
               <HiOutlineMail />
               <span>{currentUser?.email}</span>
             </a>
-            <a className=' cursor-pointer hover:opacity-100 hover:text-blue-800 flex flex-row items-center justify-center gap-0.5 transition-all duration-200  '>
+            <a className=' cursor-pointer hover:opacity-100 active:opacity-100 hover:text-blue-800 active:text-blue-800 flex flex-row items-center justify-center gap-0.5 transition-all duration-200  '>
               <CiPhone />
               <span>{currentUser?.phone}</span>
             </a>
@@ -92,10 +92,10 @@ export default function NavAcc({ isMenuOpen, setIsMenuOpen }) {
             <span className='opacity-50 border-b-2 border-gray-100 py-4 px-4'>Find With Us.</span>
           </div>
           <div className='flex flex-row gap-1 items-center justify-center'>
-            <FiFacebook className=' p-3.5 size-12 rounded-2xl hover:bg-blue-500  hover:text-white cursor-pointer opacity-70 hover:opacity-100 transition-all duration-300 ' />
-            <FiTwitter className=' p-3.5 size-12 opacity-70 hover:opacity-100 transition-all duration-300 rounded-2xl hover:bg-blue-500 hover:text-white cursor-pointer ' />
-            <FaInstagram className=' p-3.5 size-12 opacity-70 hover:opacity-100 transition-all duration-300 rounded-full hover:bg-blue-500 hover:text-white cursor-pointer ' />
-            <FiLinkedin className=' p-3.5 size-12 opacity-70 hover:opacity-100 transition-all duration-300 rounded-xl hover:bg-blue-500  hover:text-white cursor-pointer ' />
+            <FiFacebook className=' p-3.5 size-12 rounded-2xl hover:bg-blue-500 active:bg-blue-500  hover:text-white active:text-white cursor-pointer opacity-70 hover:opacity-100 active:opacity-100 transition-all duration-300 ' />
+            <FiTwitter className=' p-3.5 size-12 opacity-70 hover:opacity-100 active:opacity-100 transition-all duration-300 rounded-2xl hover:bg-blue-500 active:bg-blue-500 hover:text-white active:text-white cursor-pointer ' />
+            <FaInstagram className=' p-3.5 size-12 opacity-70 hover:opacity-100 active:opacity-100 transition-all duration-300 rounded-full hover:bg-blue-500 active:bg-blue-500 hover:text-white active:text-white cursor-pointer ' />
+            <FiLinkedin className=' p-3.5 size-12 opacity-70 hover:opacity-100 active:opacity-100 transition-all duration-300 rounded-xl hover:bg-blue-500 active:bg-blue-500  hover:text-white active:text-white cursor-pointer ' />
           </div>
 
         </div>

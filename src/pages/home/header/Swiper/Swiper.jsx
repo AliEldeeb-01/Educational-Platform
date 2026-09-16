@@ -100,7 +100,7 @@ export default function Swiiper() {
 
                       <Link
                         to={`/Details/${course.id}`}
-                        className="text-xs font-bold  hover:text-amber-200 transition-all duration-300 rounded-xl border border-transparent hover:bg-amber-600 hover:border-amber-400 flex items-center gap-0.5 px-3 py-2"
+                        className="text-xs font-bold  hover:text-amber-200 active:text-amber-200 transition-all duration-300 rounded-xl border border-transparent hover:bg-amber-600 active:bg-amber-600 hover:border-amber-400 active:border-amber-400 flex items-center gap-0.5 px-3 py-2"
                       >
                         Learn More
                         <span className="text-[10px]">➔</span>

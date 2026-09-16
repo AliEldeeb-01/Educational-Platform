@@ -41,17 +41,17 @@ export default function Demo() {
 
           <div className="flex flex-row gap-4">
 
-            <span className="flex flex-row gap-1 items-center opacity-50 hover:opacity-100 transition duration-200 cursor-pointer">
+            <span className="flex flex-row gap-1 items-center opacity-50 hover:opacity-100 active:opacity-100 transition duration-200 cursor-pointer">
               <FaInstagram />
               500K
             </span>
 
-            <span className="flex flex-row gap-1 items-center opacity-50 hover:opacity-100 transition duration-200 cursor-pointer">
+            <span className="flex flex-row gap-1 items-center opacity-50 hover:opacity-100 active:opacity-100 transition duration-200 cursor-pointer">
               <FaFacebook />
               100k
             </span>
 
-            <Link to={'https://wa.me/201008455808?text=Hi,Are you ready to Develop now?'} className="flex flex-row gap-1 items-center opacity-50 hover:opacity-100 transition duration-200 cursor-pointer">
+            <Link to={'https://wa.me/201008455808?text=Hi,Are you ready to Develop now?'} className="flex flex-row gap-1 items-center opacity-50 hover:opacity-100 active:opacity-100 transition duration-200 cursor-pointer">
               <IoIosCall />
               +201008455808
             </Link>
@@ -68,7 +68,7 @@ export default function Demo() {
             </span>
 
             <span>
-              <PiHandWavingFill className="text-amber-300 text-xl hover:text-amber-500 cursor-pointer" />
+              <PiHandWavingFill className="text-amber-300 text-xl hover:text-amber-500 active:text-amber-500 cursor-pointer" />
             </span>
 
             <span className="text-[12px] opacity-75">
@@ -86,19 +86,19 @@ export default function Demo() {
 
             <div className="hidden lg:flex flex-row gap-1 border-e border-gray-700 pe-4">
 
-              <div className="rounded-full opacity-50 hover:opacity-100 cursor-pointer p-2 hover:bg-[#3b4049]">
+              <div className="rounded-full opacity-50 hover:opacity-100 active:opacity-100 cursor-pointer p-2 hover:bg-[#3b4049] active:bg-[#3b4049]">
                 <FaFacebook />
               </div>
 
-              <div className="rounded-full opacity-50 hover:opacity-100 cursor-pointer p-2 hover:bg-[#3b4049]">
+              <div className="rounded-full opacity-50 hover:opacity-100 active:opacity-100 cursor-pointer p-2 hover:bg-[#3b4049] active:bg-[#3b4049]">
                 <FaTwitter />
               </div>
 
-              <div className="rounded-full opacity-50 hover:opacity-100 cursor-pointer p-2 hover:bg-[#3b4049]">
+              <div className="rounded-full opacity-50 hover:opacity-100 active:opacity-100 cursor-pointer p-2 hover:bg-[#3b4049] active:bg-[#3b4049]">
                 <FaLinkedinIn />
               </div>
 
-              <div className="rounded-full opacity-50 hover:opacity-100 cursor-pointer p-2 hover:bg-[#3b4049]">
+              <div className="rounded-full opacity-50 hover:opacity-100 active:opacity-100 cursor-pointer p-2 hover:bg-[#3b4049] active:bg-[#3b4049]">
                 <FaInstagram />
               </div>
 
@@ -109,7 +109,7 @@ export default function Demo() {
 
             <div className="relative inline-block group cursor-pointer select-none">
 
-              <div className="bg-[#192335] hidden flex-row justify-center items-center gap-1.5 text-white font-medium transition-all duration-200 px-2 py-1 rounded  lg:flex hover:text-amber-400">
+              <div className="bg-[#192335] hidden flex-row justify-center items-center gap-1.5 text-white font-medium transition-all duration-200 px-2 py-1 rounded  lg:flex hover:text-amber-400 active:text-amber-400">
 
                 <img src={egy}
                   className=' rounded-2xl w-[50px] h-[30px] translate-y-1 '

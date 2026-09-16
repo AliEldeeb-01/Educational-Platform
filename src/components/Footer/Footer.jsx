@@ -30,9 +30,9 @@ export default function Footer() {
             </p>
             <span>Call me on Whatsapp :</span>
             <Link
-              to={'https://wa.me/201008455808?text=Hi,Are you ready to Develop now?!..'} className="group relative flex items-center gap-2 px-6 py-3 rounded-full border border-gradient-to-r text-[15px] font-medium  overflow-hidden border-[#e2e8f0] hover:border-[#2f57ef] transition-all duration-300 group ">
+              to={'https://wa.me/201008455808?text=Hi,Are you ready to Develop now?!..'} className="group relative flex items-center gap-2 px-6 py-3 rounded-full border border-gradient-to-r text-[15px] font-medium  overflow-hidden border-[#e2e8f0] hover:border-[#2f57ef] active:border-[#2f57ef] transition-all duration-300 group ">
               Contact With Us On <FaWhatsapp className=' size-fit' />
-              <FiArrowRight className="text-lg   group-hover:translate-x-1 transition-all duration-300 group-hover:rotate-180 " />
+              <FiArrowRight className="text-lg   group-hover:translate-x-1 group-active:translate-x-1 transition-all duration-300 group-hover:rotate-180 group-active:rotate-180 " />
 
             </Link>
             
@@ -44,7 +44,7 @@ export default function Footer() {
             <ul className="flex flex-col gap-3.5 text-[15px] text-[#6b7280]">
               {['Marketplace', 'kindergarten', 'University', 'GYM Coaching', 'FAQ'].map((link) => (
                 <li key={link}>
-                  <a href="#" className="relative inline-block pb-0.5 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#2f57ef] after:transition-all after:duration-300 hover:after:w-full hover:text-[#2f57ef] transition-colors duration-300">
+                  <a href="#" className="relative inline-block pb-0.5 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#2f57ef] after:transition-all after:duration-300 hover:after:w-full active:after:w-full hover:text-[#2f57ef] active:text-[#2f57ef] transition-colors duration-300">
                     {link}
                   </a>
                 </li>
@@ -58,7 +58,7 @@ export default function Footer() {
             <ul className="flex flex-col gap-3.5 text-[15px] text-[#6b7280]">
               {['Contact Us', 'Become Teacher', 'Blog', 'Instructor', 'Events'].map((link) => (
                 <li key={link}>
-                  <a href="#" className="relative inline-block pb-0.5 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#2f57ef] after:transition-all after:duration-300 hover:after:w-full hover:text-[#2f57ef] transition-colors duration-300">
+                  <a href="#" className="relative inline-block pb-0.5 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#2f57ef] after:transition-all after:duration-300 hover:after:w-full active:after:w-full hover:text-[#2f57ef] active:text-[#2f57ef] transition-colors duration-300">
                     {link}
                   </a>
                 </li>
@@ -70,10 +70,10 @@ export default function Footer() {
           <div className="flex flex-col gap-4">
             <h4 className="text-[17px] font-bold mb-2 ">Contact The Developer:</h4>
             <p className="text-[15px] text-[#6b7280]">
-              Phone: <span className=" hover:text-[#2f57ef] cursor-pointer transition-colors">01008455808</span>
+              Phone: <span className=" hover:text-[#2f57ef] active:text-[#2f57ef] cursor-pointer transition-colors">01008455808</span>
             </p>
             <p className="text-[15px] text-[#6b7280]">
-              E-mail: <span className=" hover:text-[#2f57ef] cursor-pointer transition-colors">creativeyoung960@gmail.com</span>
+              E-mail: <span className=" hover:text-[#2f57ef] active:text-[#2f57ef] cursor-pointer transition-colors">creativeyoung960@gmail.com</span>
             </p>
             <p className="text-[15px] text-[#6b7280]">
               Location: <span className="">EGYPT</span>
@@ -84,7 +84,7 @@ export default function Footer() {
                 <div className=' flex flex-row'>
                   <a
 
-                    key={index} href="#" className="w-9 h-9 flex items-center justify-center rounded-full bg-[#f5f7fa] text-[#6b7280] hover:bg-[#2f57ef] hover:text-white transition-all duration-300 text-sm">
+                    key={index} href="#" className="w-9 h-9 flex items-center justify-center rounded-full bg-[#f5f7fa] text-[#6b7280] hover:bg-[#2f57ef] active:bg-[#2f57ef] hover:text-white active:text-white transition-all duration-300 text-sm">
                     <Icon />
 
                   </a>
@@ -104,7 +104,7 @@ export default function Footer() {
 
         <div className="border-t border-[#f1f5f9] pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-[14px] text-[#6b7280]">
           <div>
-            Copyright © 2026 <span className="font-semibold  hover:text-[#2f57ef] cursor-pointer">Pixcels Themes</span>. All Rights Reserved
+            Copyright © 2026 <span className="font-semibold  hover:text-[#2f57ef] active:text-[#2f57ef] cursor-pointer">Pixcels Themes</span>. All Rights Reserved
           </div>
 
           <div className="flex flex-wrap justify-center gap-6">
@@ -112,7 +112,7 @@ export default function Footer() {
 
               <a
                 onClick={() => item == 'Login & Register' ? navigate('/register').then(window.scrollTo(0, 0)) : ''}
-                key={item} href="" className="hover:text-[#2f57ef] transition-colors">
+                key={item} href="" className="hover:text-[#2f57ef] active:text-[#2f57ef] transition-colors">
                 {item}
               </a>
             ))}

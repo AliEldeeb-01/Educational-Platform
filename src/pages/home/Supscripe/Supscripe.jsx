@@ -52,7 +52,7 @@ export default function Supscripe() {
                 />
                 <button
                   type="submit"
-                  className="bg-gradient-to-r from-blue-600 to-purple-500 text-white px-6 md:px-8 py-3 rounded-lg font-bold text-sm md:text-base flex items-center gap-2 hover:opacity-90 transition-opacity whitespace-nowrap"
+                  className="bg-gradient-to-r from-blue-600 to-purple-500 text-white px-6 md:px-8 py-3 rounded-lg font-bold text-sm md:text-base flex items-center gap-2 hover:opacity-90 active:opacity-90 transition-opacity whitespace-nowrap"
                 >
                   Subscribe <span>&rarr;</span>
                 </button>

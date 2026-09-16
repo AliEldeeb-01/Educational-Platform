@@ -183,7 +183,7 @@ export function Acc({ setIsMenuOpen, isMenuOpen }) {
         {megaMenuItems.map((item) => (
           <AccordionItem key={item.value} value={item.value} className="border-b border-amber-100 py-1">
 
-            <AccordionTrigger className="flex w-full items-center justify-between py-3 text-sm font-bold  transition-colors duration-200 hover:text-blue-300">
+            <AccordionTrigger className="flex w-full items-center justify-between py-3 text-sm font-bold  transition-colors duration-200 hover:text-blue-300 active:text-blue-300">
               {item.trigger}
             </AccordionTrigger>
 
@@ -194,7 +194,7 @@ export function Acc({ setIsMenuOpen, isMenuOpen }) {
                 <Accordion type="single" collapsible className="w-full">
                   {item.sections.map((group, gIndex) => (
                     <AccordionItem key={gIndex} value={`${item.value}-sub-${gIndex}`} className="border-none">
-                      <AccordionTrigger className="flex w-full items-center justify-between py-2 text-xs font-semibold  transition-all duration-200 hover:text-blue-300">
+                      <AccordionTrigger className="flex w-full items-center justify-between py-2 text-xs font-semibold  transition-all duration-200 hover:text-blue-300 active:text-blue-300">
                         {group.title}
                       </AccordionTrigger>
                       <AccordionContent className="pb-1 pt-1 pl-3  shadow-[0_0_2px_2px_#DCBF56] flex flex-col gap-1.5">
@@ -202,7 +202,7 @@ export function Acc({ setIsMenuOpen, isMenuOpen }) {
                           <Link
                             key={lIndex}
                             to={link.path}
-                            className="py-1 text-[11px] font-medium transition-colors duration-200 hover:text-blue-300 block"
+                            className="py-1 text-[11px] font-medium transition-colors duration-200 hover:text-blue-300 active:text-blue-300 block"
                             onClick={() => setIsMenuOpen(false)}
                           >
                             {link.name}
@@ -229,7 +229,7 @@ export function Acc({ setIsMenuOpen, isMenuOpen }) {
                         <Link
                           key={lIndex}
                           to={link.path}
-                          className="py-1 text-[11px] font-medium  transition-colors duration-200 hover:text-blue-300 block"
+                          className="py-1 text-[11px] font-medium  transition-colors duration-200 hover:text-blue-300 active:text-blue-300 block"
                           onClick={() => ScrollUpAndFalseMenu()}
                         >
                           {link.name}

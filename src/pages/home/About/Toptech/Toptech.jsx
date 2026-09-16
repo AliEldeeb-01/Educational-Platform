@@ -29,11 +29,11 @@ export default function Toptech() {
           <div className=' lg:w-[120%] lg:-translate-x-8  relative rounded-xl overflow-hidden group cursor-pointer'>
             <img
               src={video}
-              className='w-full h-full object-cover transition-transform duration-300 group-hover:scale-105'
+              className='w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 group-active:scale-105'
               alt="Course Preview"
             />
             {/* زر التشغيل السحري بصيغة CSS Pure */}
-            <div className='absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/20 transition-colors'>
+            <div className='absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/20 group-active:bg-black/20 transition-colors'>
               <div className='relative flex items-center justify-center w-16 h-16 bg-white rounded-full text-[#2f57ef] shadow-lg'>
                 {/* طبقات النبض الخلفية المحاكية للـ GIF */}
                 <span className='absolute inset-0 rounded-full bg-white opacity-40 animate-ping' style={{ animationDuration: '2s' }}></span>
@@ -59,7 +59,7 @@ export default function Toptech() {
           <p className='text-gray-500 text-sm'>
             Top instructors from around the world
           </p>
-          <button className=' bg-[#7042f8]  hover:bg-[#943aff] duration-300 transition-all cursor-pointer scale-95 hover:scale-100 font-medium px-8 py-3.5 rounded-xl hover:opacity-90  shadow-md shadow-purple-200'>
+          <button className=' bg-[#7042f8]  hover:bg-[#943aff] active:bg-[#943aff] duration-300 transition-all cursor-pointer scale-95 hover:scale-100 active:scale-100 font-medium px-8 py-3.5 rounded-xl hover:opacity-90 active:opacity-90  shadow-md shadow-purple-200'>
             Join Now
 
           </button>
