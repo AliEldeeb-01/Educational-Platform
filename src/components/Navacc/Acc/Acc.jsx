@@ -9,7 +9,6 @@ import {
 
 import { Link } from "react-router-dom"
 import { DisplayContext } from "../../../context/DisplayContext"
-// 📊 الداتا الكاملة والمنظمة بالملي بناءً على تقسيمة التصميم
 const megaMenuItems = [
   {
     value: "home-menu",
@@ -42,7 +41,7 @@ const megaMenuItems = [
     isNestedDashboard: false,
     sections: [
       {
-        title: "Course Layout", // 👈 العنوان اللي اتكلمت عنه
+        title: "Course Layout", 
         links: [
           { name: "Filter One Toggle", path: "#" }, { name: "Filter One Open", path: "#" },
           { name: "Filter Two Toggle", path: "#" }, { name: "Filter Two Open", path: "#" },
