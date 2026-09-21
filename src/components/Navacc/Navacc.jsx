@@ -48,7 +48,7 @@ export default function NavAcc({ isMenuOpen, setIsMenuOpen }) {
           : `bg-white text-[#192335]`} z-10  pl-1 w-full py-2  `}>
           <div className='flex-row justify-between items-center items- mb-4 flex'>
 
-            <img src={imagg} className=' w-32 h-[75px]' alt="" />
+            <img src={imagg} className=' w-32 h-fit' alt="" />
             <span>
               <MdClose onClick={() => setIsMenuOpen(false)} className={` p-2 rounded-full  cursor-pointer size-10 transition-all duration-400 ${dark ? `bg-red-600 text-red-200 hover:bg-red-200 active:bg-red-200 hover:text-red-600 active:text-red-600` : `bg-red-200 text-red-600 hover:bg-red-600 active:bg-red-600 hover:text-red-200 active:text-red-200`}  `} />
             </span>

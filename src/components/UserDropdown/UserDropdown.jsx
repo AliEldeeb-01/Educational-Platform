@@ -29,7 +29,7 @@ export const UserDropdown = () => {
         <Button className={`flex flex-row gap-1 justify-center items-center cursor-pointer rounded-2xl p-2.5 transition-all duration-200 outline-none text-sm font-medium bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent lg:-translate-x-2 border-b-rose-500`}>
           {currentUser ?
             <div className="gap-2 flex flex-row items-center">
-              <img src={currentUser?.image || manager} className="shadow w-15 rounded-full" alt="" />
+              <img src={currentUser?.image || manager} className="shadow h-[45px] object-cover w-15 rounded-[20px]" alt="" />
               <span className="hidden lg:flex capitalize font-semibold text-xl">{currentUser?.firstName}</span>
             </div>
             :
