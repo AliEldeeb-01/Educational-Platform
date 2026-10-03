@@ -47,7 +47,7 @@ export default function Categories() {
 
       {/* الجريد الـ Responsive (4, 3, 2, 1) */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full">
-        {categoryList.map((cat, idx) => (
+        {categoryList?.map((cat, idx) => (
           <div
             key={idx}
             onClick={() => handleNavigate('/shopCourses')}

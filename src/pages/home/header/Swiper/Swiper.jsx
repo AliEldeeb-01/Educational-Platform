@@ -42,7 +42,7 @@ export default function Swiiper() {
               modules={[EffectCards]}
               className="w-[80%] rounded bg-transparent"
             >
-              {courseData.map((course) => (
+              {courseData?.map((course) => (
                 <SwiperSlide key={course?.id} className='bg-transparent'>
                   <div
 

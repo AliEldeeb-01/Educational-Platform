@@ -63,7 +63,7 @@ export default function Drop2({ isHandle, setIsHandle }) {
         `top-[35px]` :
         `top-[78px]`} `}>
 
-      {demoImages.map((item, index) => (
+      {demoImages?.map((item, index) => (
         <div
           key={index}
           className="group/card flex flex-col gap-2 cursor-pointer items-center text-center"

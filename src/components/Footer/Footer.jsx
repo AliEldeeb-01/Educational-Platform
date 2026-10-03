@@ -42,7 +42,7 @@ export default function Footer() {
           <div>
             <h4 className="text-[17px] font-bold mb-6 ">Useful Links</h4>
             <ul className="flex flex-col gap-3.5 text-[15px] text-[#6b7280]">
-              {['Marketplace', 'kindergarten', 'University', 'GYM Coaching', 'FAQ'].map((link) => (
+              {['Marketplace', 'kindergarten', 'University', 'GYM Coaching', 'FAQ']?.map((link) => (
                 <li key={link}>
                   <a href="#" className="relative inline-block pb-0.5 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#2f57ef] after:transition-all after:duration-300 hover:after:w-full active:after:w-full hover:text-[#2f57ef] active:text-[#2f57ef] transition-colors duration-300">
                     {link}
@@ -56,7 +56,7 @@ export default function Footer() {
           <div>
             <h4 className="text-[17px] font-bold mb-6 ">Our Company</h4>
             <ul className="flex flex-col gap-3.5 text-[15px] text-[#6b7280]">
-              {['Contact Us', 'Become Teacher', 'Blog', 'Instructor', 'Events'].map((link) => (
+              {['Contact Us', 'Become Teacher', 'Blog', 'Instructor', 'Events']?.map((link) => (
                 <li key={link}>
                   <a href="#" className="relative inline-block pb-0.5 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#2f57ef] after:transition-all after:duration-300 hover:after:w-full active:after:w-full hover:text-[#2f57ef] active:text-[#2f57ef] transition-colors duration-300">
                     {link}
@@ -80,7 +80,7 @@ export default function Footer() {
             </p>
 
             <div className="flex items-center gap-4 mt-2">
-              {[FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn].map((Icon, index) => (
+              {[FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn]?.map((Icon, index) => (
                 <div className=' flex flex-row'>
                   <a
 
@@ -108,7 +108,7 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-wrap justify-center gap-6">
-            {['Terms of service', 'Privacy policy', 'Subscription', 'Login & Register'].map((item) => (
+            {['Terms of service', 'Privacy policy', 'Subscription', 'Login & Register']?.map((item) => (
 
               <a
                 onClick={() => item == 'Login & Register' ? navigate('/register').then(window.scrollTo(0, 0)) : ''}

@@ -179,7 +179,7 @@ export function Acc({ setIsMenuOpen, isMenuOpen }) {
         collapsible
         className="w-full"
       >
-        {megaMenuItems.map((item) => (
+        {megaMenuItems?.map((item) => (
           <AccordionItem key={item.value} value={item.value} className="border-b border-amber-100 py-1">
 
             <AccordionTrigger className="flex w-full items-center justify-between py-3 text-sm font-bold  transition-colors duration-200 hover:text-blue-300 active:text-blue-300">
@@ -191,13 +191,13 @@ export function Acc({ setIsMenuOpen, isMenuOpen }) {
               {/* 🔍 الحالة الأولى: لو إحنا في الـ Dashboard هنعمل تداخل حقيقي (Nested Accordion) */}
               {item.isNestedDashboard ? (
                 <Accordion type="single" collapsible className="w-full">
-                  {item.sections.map((group, gIndex) => (
+                  {item.sections?.map((group, gIndex) => (
                     <AccordionItem key={gIndex} value={`${item.value}-sub-${gIndex}`} className="border-none">
                       <AccordionTrigger className="flex w-full items-center justify-between py-2 text-xs font-semibold  transition-all duration-200 hover:text-blue-300 active:text-blue-300">
                         {group.title}
                       </AccordionTrigger>
                       <AccordionContent className="pb-1 pt-1 pl-3  shadow-[0_0_2px_2px_#DCBF56] flex flex-col gap-1.5">
-                        {group.links.map((link, lIndex) => (
+                        {group.links?.map((link, lIndex) => (
                           <Link
                             key={lIndex}
                             to={link.path}
@@ -214,7 +214,7 @@ export function Acc({ setIsMenuOpen, isMenuOpen }) {
               ) : (
                 /* 🔍 الحالة الثانية: باقي الأقسام، العناوين بتنزل كـ نص شيك والروابط مفرودة تحتها علطول */
                 <div className="flex flex-col gap-3 max-h-[400px] overflow-y-auto pr-1 custom-scrollbar">
-                  {item.sections.map((section, sIndex) => (
+                  {item.sections?.map((section, sIndex) => (
                     <div key={sIndex} className="flex flex-col gap-1.5">
                       {/* لو السكشن ليه عنوان (زي Course Layout) هيعرضه كخط عريض رمادي غامق ومش رابط */}
                       {section.title && (
@@ -224,7 +224,7 @@ export function Acc({ setIsMenuOpen, isMenuOpen }) {
                       )}
 
                       {/* الروابط المفرودة تحت العنوان الفرعي */}
-                      {section.links.map((link, lIndex) => (
+                      {section.links?.map((link, lIndex) => (
                         <Link
                           key={lIndex}
                           to={link.path}

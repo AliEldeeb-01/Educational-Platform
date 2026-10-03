@@ -21,11 +21,11 @@ export default function CartPage() {
   // console.log(records);
   const { dark } = useContext(DisplayContext)
 
-  const productsFullInfo = records.map((product) => ({
+  const productsFullInfo = records?.map((product) => ({
     ...product,
     amount: cartIdes[product.id]
 
-  }));
+  })) ?? [];
   // setRecords(productsFullInfo)
 
   console.log(productsFullInfo);
@@ -95,7 +95,7 @@ export default function CartPage() {
                 <p className='text-2xl text-red-700 capitalize text-shadow-red-600 ' > your cart is empty : ( </p>
                 <Link className='text-4xl text-blue-600 capitalize underline w-full text-center ' to={'/shop'} > what about adding some products... </Link>
               </div>
-              : productsFullInfo.map((val, index) => {
+              : productsFullInfo?.map((val, index) => {
 
                 const finalPrice = (val.price - (val.price * val.discount / 100))
 
@@ -103,7 +103,7 @@ export default function CartPage() {
                 // علشان يعرف يلوب عليهم بالماب (عشان محطناش قيم من الاراي ميثود)
                 // وبالتالي نعمل خانات بعدد الستوك اللي عندنا وبارك الله فيهما رزق
 
-                let maxCount = Array(val.stock).fill(0).map((val, num) => {
+                let maxCount = Array(val.stock).fill(0)?.map((val, num) => {
 
                   let index = ++num
 

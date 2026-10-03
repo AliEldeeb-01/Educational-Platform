@@ -97,7 +97,7 @@ export default function CoursesData() {
                         </div>
 
                         :
-                        booksData.map((val) => (
+                        booksData?.map((val) => (
 
 
                             <div

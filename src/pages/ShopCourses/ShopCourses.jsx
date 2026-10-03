@@ -120,7 +120,7 @@ export default function CoursesData() {
               </div>
 
               :
-              courseData.map((val) => (
+              courseData?.map((val) => (
 
 
                 <div

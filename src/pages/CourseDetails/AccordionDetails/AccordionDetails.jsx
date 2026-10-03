@@ -100,7 +100,7 @@ export function AccordionDetails() {
         className="space-y-4"
         defaultValue="intro"
       >
-        {courseSections.map((section) => (
+        {courseSections?.map((section) => (
           <AccordionItem
             key={section.id}
             value={section.id}
@@ -150,7 +150,7 @@ export function AccordionDetails() {
                   dark ? "divide-gray-700" : "divide-gray-100"
                 }`}
               >
-                {section.lessons.map((lesson) => (
+                {section.lessons?.map((lesson) => (
                   <div
                     key={lesson.id}
                     className={`flex items-center justify-between px-6 py-3.5 transition-colors ${

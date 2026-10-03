@@ -32,7 +32,7 @@ export default function Drop4() {
           <ul className={`  ${dark == true ?
             `bg-[#192335] text-white `
             : `bg-white text-black`}  py-3 rounded-xl border border-gray-100 shadow-2xl flex flex-col gap-1.5`}>
-            {instructorItems.map((item, index) => (
+            {instructorItems?.map((item, index) => (
               <li
                 key={index}
                 className="px-5 py-1.5 hover:text-blue-600 active:text-blue-600 hover:bg-gray-50 active:bg-gray-50 text-[14px] font-medium transition-colors cursor-pointer"
@@ -57,7 +57,7 @@ export default function Drop4() {
           <ul className={` py-3 rounded-xl border border-gray-100 shadow-2xl flex flex-col gap-1.5  ${dark == true ?
             `bg-[#192335] text-white `
             : `bg-white text-black`}`}>
-            {studentItems.map((item, index) => (
+            {studentItems?.map((item, index) => (
               <li
                 key={index}
                 className="px-5 py-1.5 hover:text-blue-600 active:text-blue-600 hover:bg-gray-50 active:bg-gray-50 text-[14px] font-medium transition-colors cursor-pointer"
