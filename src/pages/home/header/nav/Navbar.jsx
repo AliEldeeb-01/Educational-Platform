@@ -26,7 +26,7 @@ import Switch from '../../../../components/DarkMode/DarkMode';
 
 export default function Navbar() {
 
-  const [isHandle, setIsHandle] = useState(false)
+  const [isHandle, setIsHandle] = useState(true)
   // const [numOfProduct, setNumOfProduct] = useState(null)
   const { records, cartIdes } = useContext(CartContext)
   const NUM = Object.keys(cartIdes).length
@@ -37,34 +37,15 @@ export default function Navbar() {
 
   const Navigate = useNavigate()
 
-  useEffect(
-    () => {
-      const handleScroll = window.addEventListener('scroll', () => {
-        if (window.scrollY >= 20) {
-          setIsHandle(true)
-        } else {
-          setIsHandle(false)
-        }
-        // النقطة اللي كانت فايتاني حاجتين ان (addevenlistener) بتشتغل علطول مش بتشتغل وتقفل
-        // الحاجة التانيه ان الافيكت بتشغل حاجه بغض النظر الحاجة اللي جواها هتشتغل كام مره
-      })
-      window.addEventListener('scroll', handleScroll)
 
-      return () => {
-        window.removeEventListener('scroll', handleScroll)
-      }
-    }
-    , []
-  )
 
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const { dark, setDark } = useContext(DisplayContext)
 
   return (
 
-    <section className={`fixed left-0 right-0 w-full z-40 ${dark == false ? `bg-white text-black` : `bg-[#1C2833] text-white`}
-      ${isHandle == true ? ` transition duration-200 top-0` : `top-auto`
-      }
+    <section className={`fixed left-0 right-0 top-0 w-full z-40 ${dark == false ? `bg-white text-black` : `bg-[#1C2833] text-white`}
+    
     
     `}>
       <div className='flex justify-between flex-row items-center w-full h-20 pl-2 py-5 shadow '>

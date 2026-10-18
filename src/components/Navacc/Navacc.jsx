@@ -26,14 +26,14 @@ export default function NavAcc({ isMenuOpen, setIsMenuOpen }) {
         <div
           onClick={() => setIsMenuOpen(false)}
           className={`fixed right-0 left-0 bottom-0 
-            ${scrollY <= 20 ? `top-50` : `top-20`}
              z-40 bg-black/40 backdrop-blur-sm
+             top-20
             `}
         />
       }
       <div
         className={`w-[80%] z-50 
-           ${scrollY <= 20 ? ` -translate-y-2` : ``}
+           
           lg:hidden md:absolute md:w-[60%] sm:w[75%]  p-5 absolute  left-0 ${dark == true ?
             `bg-[#192335] text-gray-100 `
             : `bg-white text-[#192335]`}

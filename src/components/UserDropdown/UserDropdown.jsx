@@ -38,12 +38,12 @@ export const UserDropdown = () => {
         </Button>
 
         {/* الـ Popover اللي بينزل تحت الزرار أوتوماتيك */}
-        <Popover placement="bottom end" className={`${dark == false ? `bg-white text-black` : `bg-[#1C2833] text-white`} z-50 min-w-56 mt-2 rounded-xl shadow-xl border border-amber-500 p-1 translate-y-[5px] sm:translate-x-0`}>
+        <Popover placement="bottom end" className={`${dark == false ? `bg-white text-black` : `bg-[#1C2833] text-white`} z-50 min-w-56 mt-2 rounded-xl shadow-xl border border-amber-500 p-1 sm:translate-x-0 -translate-y-2`}>
           <Menu className="outline-none">
 
             <MenuItem className="flex items-center justify-start hover:text-white active:text-white gap-[40px] px-3 py-2 text-sm rounded-lg cursor-pointer outline-none">
               <div className="flex items-center gap-2">
-                <span><img src={currentUser.image} className="rounded-full w-25" alt="" /></span>
+                <span><img src={currentUser.image} className="rounded-full w-25 h-[50px] object-cover" alt="" /></span>
               </div>
               <div className="flex flex-col">
                 <span className="text-[18px] font-semibold bg-gradient-to-r from-fuchsia-500 to-cyan-500 text-transparent bg-clip-text group capitalize relative">
@@ -59,7 +59,7 @@ export const UserDropdown = () => {
               </div>
             </MenuItem>
 
-            <MenuItem className="hover:text-white active:text-white flex items-center justify-between px-3 py-2 text-sm duration-300 transition-all hover:bg-gradient-to-r active:bg-gradient-to-r from-amber-500 to-pink-500 rounded-lg cursor-pointer outline-none">
+            <MenuItem className="hover:text-green-200 active:text-green-200 flex items-center justify-between px-3 py-2 text-sm duration-300 transition-all hover:bg-blue-700 active:bg-blue-700 rounded-lg cursor-pointer outline-none">
               <div className="flex items-center gap-2">
                 <MdEmail />
                 <span>
@@ -68,14 +68,14 @@ export const UserDropdown = () => {
               </div>
             </MenuItem>
 
-            <MenuItem className="hover:text-white active:text-white flex items-center justify-between px-3 py-2 text-sm duration-300 transition-all hover:bg-gradient-to-r active:bg-gradient-to-r from-amber-500 to-pink-500 rounded-lg cursor-pointer outline-none">
+            <MenuItem className="hover:text-green-200 active:text-green-200 flex items-center justify-between px-3 py-2 text-sm duration-300 transition-all hover:bg-blue-600 active:bg-blue-600 rounded-lg cursor-pointer outline-none">
               <div className="flex items-center gap-2">
                 <FaPhoneAlt />
                 <span> {currentUser?.phone}</span>
               </div>
             </MenuItem>
 
-            <MenuItem className="hover:text-white active:text-white flex items-center justify-between px-3 py-2 text-sm duration-300 transition-all hover:bg-gradient-to-r active:bg-gradient-to-r from-amber-500 to-pink-500 rounded-lg cursor-pointer outline-none">
+            <MenuItem className="hover:text-green-200 active:text-green-200 flex items-center justify-between px-3 py-2 text-sm duration-300 transition-all hover:bg-blue-500 active:bg-blue-500  rounded-lg cursor-pointer outline-none">
               <Link to={'/CartPage'} className="flex items-center gap-2 w-full h-full">
                 <IoCart />
                 <span>Your Cart</span>
