@@ -40,10 +40,10 @@ export default function Swiiper() {
               effect="cards"
               grabCursor={true}
               modules={[EffectCards]}
-              className="w-[80%] rounded bg-transparent overflow-hidden"
+              className="w-[73%]  rounded bg-transparent "
             >
               {courseData?.map((course) => (
-                <SwiperSlide key={course?.id} className='bg-transparent overflow-hidden'>
+                <SwiperSlide key={course?.id} className='w-full  bg-transparent rounded-xl' >
                   <div
 
                     className={`
