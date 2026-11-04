@@ -10,6 +10,7 @@ export const DisplayContextProvider = ({ children }) => {
     const [booksError, setBooksError] = useState(null)
     const [booksLoader, setBooksLoader] = useState(false)
     const [courseData, setCourseData] = useState([])
+    const [courseSearch, setCourseSearch] = useState('')
     const [dark, setDark] = useState(false)
     useEffect(
         () => {
@@ -74,10 +75,9 @@ export const DisplayContextProvider = ({ children }) => {
         }, []
     )
 
-    return <DisplayContext.Provider value={{ booksData, booksError, booksLoader, courseData, dark, setDark }}>
+    return <DisplayContext.Provider value={{ booksData, booksError, booksLoader, courseData, courseSearch, setCourseSearch, dark, setDark }}>
         {children}
     </DisplayContext.Provider>
 }
-
 
 

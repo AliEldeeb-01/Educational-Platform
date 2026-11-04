@@ -20,7 +20,7 @@ import { Link } from 'react-router-dom';
 
 
 export default function CoursesData() {
-  const { booksData, booksError, booksLoader, courseData, dark } = useContext(DisplayContext)
+  const { booksData, booksError, booksLoader, courseData, courseSearch, dark } = useContext(DisplayContext)
   // console.log(booksData);
   const { addToCart, cartIdes } = useContext(CartContext)
 
@@ -30,6 +30,10 @@ export default function CoursesData() {
   const Navigate = useNavigate()
 
   const NavigateId = useNavigate()
+  const normalizedSearch = courseSearch.trim().toLowerCase()
+  const filteredCourses = (courseData ?? []).filter((course) =>
+    String(course.title ?? '').toLowerCase().includes(normalizedSearch)
+  )
 
 
   function handleDisBtn(id) {
@@ -120,7 +124,7 @@ export default function CoursesData() {
               </div>
 
               :
-              courseData?.map((val) => (
+              filteredCourses.length > 0 ? filteredCourses.map((val) => (
 
 
                 <div
@@ -198,7 +202,11 @@ export default function CoursesData() {
 
                 </div>
 
-              ))
+              )) : (
+                <p className={`col-span-full py-12 text-center ${dark ? 'text-gray-300' : 'text-gray-600'}`}>
+                  No courses found. Try a different search.
+                </p>
+              )
 
         }
       </div>

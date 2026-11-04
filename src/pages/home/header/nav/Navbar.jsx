@@ -23,6 +23,8 @@ import { CartContext } from '../../../../context/CartContext';
 import { useNavigate } from 'react-router-dom';
 import { DisplayContext } from '../../../../context/DisplayContext';
 import Switch from '../../../../components/DarkMode/DarkMode';
+import { Search } from 'lucide-react';
+import InputDemo from '../../../../components/Searchinput/Search';
 
 export default function Navbar() {
 
@@ -34,10 +36,9 @@ export default function Navbar() {
 
   // function getFromLocalDStorage() {
   // }
+  const [searchInput, setSearchInput] = useState(false)
 
   const Navigate = useNavigate()
-
-
 
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const { dark, setDark } = useContext(DisplayContext)
@@ -99,7 +100,6 @@ export default function Navbar() {
         </div>
 
         <div className='hidden sm:hidden md:hidden lg:flex flex-row justify-between items-center gap-2 pr-1'>
-          <CiSearch className={` size-9 cursor-pointer transition-all duration-300 hover:transition-all active:transition-all p-2 hover:text-white active:text-white hover:bg-gradient-to-r active:bg-gradient-to-r from-fuchsia-500 to-cyan-500 rounded-full sm:flex hidden `} />
           <span className=' relative'>
             <CiShoppingCart
               onClick={() => Navigate('/cartPage')}
@@ -112,7 +112,15 @@ export default function Navbar() {
 
         <div className='flex flex-row gap-[1px] justify-between items-center '>
           <div className='flex flex-row gap-[1px] justify-center items-center cursor-pointer rounded-2xl transition-all duration-200 '>
-            <CiSearch className=' size-9 cursor-pointer transition duration-200 p-2 hover:text-blue-500 active:text-blue-500 hover:bg-[#e1e1e1] active:bg-[#e1e1e1] rounded-full lg:hidden sm:flex hidden ' />
+            <button
+              type="button"
+              onClick={() => setSearchInput((isOpen) => !isOpen)}
+              aria-label={searchInput ? 'Close course search' : 'Open course search'}
+              aria-expanded={searchInput}
+              className='flex size-9 cursor-pointer items-center justify-center rounded-full p-2 transition duration-200 hover:bg-[#e1e1e1] hover:text-blue-500'
+            >
+              <CiSearch className='size-6' />
+            </button>
             <span className='relative'>
               <CiShoppingCart
                 onClick={() => Navigate('/cartPage')}
@@ -137,6 +145,18 @@ export default function Navbar() {
             </div>
           </div>
         </div>
+      </div>
+
+      <div
+        aria-hidden={!searchInput}
+        inert={!searchInput}
+        className={`absolute left-2 right-2 top-full z-50 origin-top transition-all duration-300 ease-out motion-reduce:transition-none sm:left-auto sm:right-4 sm:w-96 ${
+          searchInput
+            ? 'visible translate-y-2 scale-100 opacity-100'
+            : 'invisible -translate-y-2 scale-95 opacity-0 pointer-events-none'
+        }`}
+      >
+          <InputDemo onClose={() => setSearchInput(false)} />
       </div>
 
       <div>
