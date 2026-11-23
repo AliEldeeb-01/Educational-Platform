@@ -55,7 +55,7 @@ export default function Supscripe() {
                 />
                 <button
                   onClick={() => {
-                    window.open(`https://wa.me/201000000000?text=${encodeURIComponent(message)}`)
+                    window.open(`https://wa.me/201008455808?text=${encodeURIComponent(message)}`)
                   }}
                   type="submit"
                   className="bg-gradient-to-r from-blue-600 to-purple-500 text-white px-6 md:px-8 py-3 rounded-lg font-bold text-sm md:text-base flex items-center hover:bg-gradient-to-l active:opacity-90 gap-1 justify-center transition-opacity whitespace-nowrap cursor-pointer"
