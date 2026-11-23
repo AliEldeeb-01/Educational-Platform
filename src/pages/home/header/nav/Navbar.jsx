@@ -32,7 +32,7 @@ export default function Navbar() {
   // const [numOfProduct, setNumOfProduct] = useState(null)
   const { records, cartIdes } = useContext(CartContext)
   const NUM = Object.keys(cartIdes).length
-  console.log(NUM);
+  // console.log(NUM);
 
   // function getFromLocalDStorage() {
   // }

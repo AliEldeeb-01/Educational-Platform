@@ -33,7 +33,7 @@ import { DisplayContext } from '../../../context/DisplayContext'
 
 export default function Drop2({ isHandle, setIsHandle }) {
   const { dark } = useContext(DisplayContext)
-  console.log(dark);
+  // console.log(dark);
 
   const demoImages = [
     { img: h1, title: "Home Demo 1" }, { img: h2, title: "Home Demo 2" },

@@ -15,7 +15,7 @@ export const DisplayContextProvider = ({ children }) => {
     useEffect(
         () => {
             const mode = localStorage.getItem('mode')
-            console.log(mode);
+            // console.log(mode);
             setDark(mode == 'true' ? true : false)
 
         }
