@@ -35,7 +35,7 @@ export default function Footer() {
               <FiArrowRight className="text-lg   group-hover:translate-x-1 group-active:translate-x-1 transition-all duration-300 group-hover:rotate-180 group-active:rotate-180 " />
 
             </Link>
-            
+
           </div>
 
           {/* Useful Links  */}
@@ -81,10 +81,10 @@ export default function Footer() {
 
             <div className="flex items-center gap-4 mt-2">
               {[FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn]?.map((Icon, index) => (
-                <div className=' flex flex-row'>
+                <div key={index} className=' flex flex-row'>
                   <a
 
-                    key={index} href="#" className="w-9 h-9 flex items-center justify-center rounded-full bg-[#f5f7fa] text-[#6b7280] hover:bg-[#2f57ef] active:bg-[#2f57ef] hover:text-white active:text-white transition-all duration-300 text-sm">
+                    href="#" className="w-9 h-9 flex items-center justify-center rounded-full bg-[#f5f7fa] text-[#6b7280] hover:bg-[#2f57ef] active:bg-[#2f57ef] hover:text-white active:text-white transition-all duration-300 text-sm">
                     <Icon />
 
                   </a>
@@ -94,9 +94,9 @@ export default function Footer() {
 
               ))}
             </div>
-              <span>Not work yet
-                ,will modify soon and delete thin span.
-              </span>
+            <span>Not work yet
+              ,will modify soon and delete thin span.
+            </span>
           </div>
 
         </div>

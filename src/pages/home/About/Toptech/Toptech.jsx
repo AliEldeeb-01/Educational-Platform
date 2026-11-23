@@ -59,7 +59,13 @@ export default function Toptech() {
           <p className='text-gray-500 text-sm'>
             Top instructors from around the world
           </p>
-          <button className=' bg-[#7042f8]  hover:bg-[#943aff] active:bg-[#943aff] duration-300 transition-all cursor-pointer scale-95 hover:scale-100 active:scale-100 font-medium px-8 py-3.5 rounded-xl hover:opacity-90 active:opacity-90  shadow-md shadow-purple-200'>
+          <button
+          
+          className={`   hover:bg-[#3a68ff] active:bg-[#943aff] duration-300 transition-all cursor-pointer scale-95 hover:scale-100 active:scale-100 font-medium px-8 py-3.5 rounded-xl hover:opacity-90 active:opacity-90  shadow-md shadow-purple-200 
+          2 ${dark == true ?
+      ` text-gray-100 `
+      : `bg-[#0723c3] text-white `}
+          `}>
             Join Now
 
           </button>

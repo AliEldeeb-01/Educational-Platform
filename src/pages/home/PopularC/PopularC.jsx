@@ -48,7 +48,7 @@ export default function PopularC() {
               courseData?.slice(0, 3)?.map((course) => (
                 <div
                   key={course?.id}
-                  className="hover:-translate-y-2 active:-translate-y-2 transition-all cursor-pointer rounded-xl overflow-hidden  hover:shadow-md active:shadow-md duration-300 border shadow-[0_0_2px_2px_#DCBF56] flex flex-col justify-between"
+                  className="active:-translate-y-2 transition-all cursor-pointer rounded-xl overflow-hidden  hover:shadow-md active:shadow-md duration-300 border shadow-[0_0_2px_2px_#DCBF56] flex flex-col justify-between"
                 >
                   <div className="relative overflow-hidden group">
                     <img

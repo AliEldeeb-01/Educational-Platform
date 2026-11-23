@@ -1,11 +1,13 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 
 import * as CountUpModule from 'react-countup';
 import { useInView } from 'react-intersection-observer';
 import { DisplayContext } from '../../../context/DisplayContext';
+import { FaWhatsapp } from "react-icons/fa6";
 
 export default function Supscripe() {
   const { dark } = useContext(DisplayContext)
+  const [message, setMessage] = useState("")
 
   const { ref, inView } = useInView(
     {
@@ -27,41 +29,46 @@ export default function Supscripe() {
 
             {/* Badge العلوي */}
             <span className="inline-block bg-white/20 text-white text-xs font-semibold tracking-wider uppercase px-4 py-1.5 rounded-full mb-6 backdrop-blur-sm">
-              Get Latest Histudy Update
+              LET'S CONNECT
             </span>
 
             {/* العنوان الرئيسي */}
-            <h2 className="text-4xl md:text-5xl font-black mb-6 tracking-tight">
-              Subscribe Our Newsletter
+            <h2 className="text-4xl md:text-5xl font-black mb-6 tracking-tight ">
+              Have a Question? Let's Talk
             </h2>
 
             {/* الوصف */}
             <p className="text-blue-100 text-base md:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam explicabo sit est eos
-              earum reprehenderit inventore nam autem corrupti rerum!
+              Have a project idea, need help, or want to discuss something? Send me a message directly.
             </p>
 
             {/* فورمة إدخال الإيميل */}
             <div className="max-w-2xl mx-auto mb-4">
               <form className="bg-white p-2 rounded-xl shadow-lg flex items-center justify-between w-full">
                 <input
+                  value={message}
+                  onChange={(e) => { setMessage(e.target.value) }}
                   type="email"
-                  placeholder="Enter Your E-Mail"
-                  className="w-full px-4 py-3 text-gray-800 placeholder-gray-400 focus:outline-none rounded-lg text-sm md:text-base"
+                  placeholder="Write your message here... "
+                  className="w-full px-4 py-3 placeholder:text-cyan-700 text-gray-800  focus:outline-none rounded-lg text-sm md:text-base"
                   required
                 />
                 <button
+                  onClick={() => {
+                    window.open(`https://wa.me/201000000000?text=${encodeURIComponent(message)}`)
+                  }}
                   type="submit"
-                  className="bg-gradient-to-r from-blue-600 to-purple-500 text-white px-6 md:px-8 py-3 rounded-lg font-bold text-sm md:text-base flex items-center gap-2 hover:opacity-90 active:opacity-90 transition-opacity whitespace-nowrap"
+                  className="bg-gradient-to-r from-blue-600 to-purple-500 text-white px-6 md:px-8 py-3 rounded-lg font-bold text-sm md:text-base flex items-center hover:bg-gradient-to-l active:opacity-90 gap-1 justify-center transition-opacity whitespace-nowrap cursor-pointer"
                 >
-                  Subscribe <span>&rarr;</span>
+                  Send
+                  <FaWhatsapp className='text-green-500' />
                 </button>
               </form>
             </div>
 
             {/* نص الملاحظة الصغير أسفل الإدخال */}
             <p className="text-xs text-blue-200/80 mb-16">
-              No ads, No trails, No commitments
+              I'll get back to you as soon as possible.
             </p>
 
             {/* خط الفصل والإحصائيات */}

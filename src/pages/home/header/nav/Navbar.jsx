@@ -99,8 +99,11 @@ export default function Navbar() {
           </span>
         </div>
 
-        <div className='hidden sm:hidden md:hidden lg:flex flex-row justify-between items-center gap-2 pr-1'>
-          <span className=' relative'>
+        <div className='hidden sm:hidden md:hidden lg:flex flex-row justify-between items-center  pr-1'>
+
+
+          <span className=' relative flex flex-row gap-1'>
+
             <CiShoppingCart
               onClick={() => Navigate('/cartPage')}
               className=' size-9 cursor-pointer transition duration-200 p-2 lg:mr-2 hover:text-white active:text-white hover:bg-gradient-to-r active:bg-gradient-to-r from-fuchsia-500 to-cyan-500 rounded-full ' />
@@ -108,10 +111,19 @@ export default function Navbar() {
              flex text-center size-4 overflow-hidden items-center text-sm justify-center p-0.5 lg:mr-2"> {NUM} </span>
           </span>
 
+          <button
+            type="button"
+            onClick={() => setSearchInput((isOpen) => !isOpen)}
+            aria-label={searchInput ? 'Close course search' : 'Open course search'}
+            aria-expanded={searchInput}
+            className='flex size-9 cursor-pointer items-center justify-center rounded-full p-2 transition duration-200 hover:bg-[#e1e1e1] hover:text-blue-500'
+          >
+            <CiSearch className='size-6' />
+          </button>
         </div>
 
-        <div className='flex flex-row gap-[1px] justify-between items-center '>
-          <div className='flex flex-row gap-[1px] justify-center items-center cursor-pointer rounded-2xl transition-all duration-200 '>
+        <div className='  flex flex-row gap-[1px] justify-between items-center '>
+          <div className='flex sm:flex md:flex lg:hidden flex-row gap-[1px] justify-center items-center cursor-pointer rounded-2xl transition-all duration-200 '>
             <button
               type="button"
               onClick={() => setSearchInput((isOpen) => !isOpen)}
@@ -124,13 +136,13 @@ export default function Navbar() {
             <span className='relative'>
               <CiShoppingCart
                 onClick={() => Navigate('/cartPage')}
-                className=' size-9 cursor-pointer transition duration-200 p-2 hover:text-blue-500 active:text-blue-500 hover:bg-[#e1e1e1] active:bg-[#e1e1e1] rounded-full lg:hidden block ' />
-              <span className=" lg:hidden absolute top-0 -right-1 bg-blue-700 text-white rounded-full flex text-center size-4 overflow-hidden items-center text-sm justify-center p-0.5"> {NUM} </span>
+                className=' size-9 cursor-pointer transition duration-200 p-2 hover:text-blue-500 active:text-blue-500 hover:bg-[#e1e1e1] active:bg-[#e1e1e1] rounded-full  block ' />
+              <span className="  absolute top-0 -right-1 bg-blue-700 text-white rounded-full flex text-center size-4 overflow-hidden items-center text-sm justify-center p-0.5"> {NUM} </span>
             </span>
 
-            <UserDropdown />
-            <CiMenuBurger className='lg:hidden flex hover:text-blue-600 active:text-blue-600 hover:bg-gray-100 active:bg-gray-100 text-[35px] p-1.5 rounded-full' onClick={() => setIsMenuOpen(true)} />
           </div>
+          <UserDropdown />
+          <CiMenuBurger className='lg:hidden flex hover:text-blue-600 active:text-blue-600 hover:bg-gray-100 active:bg-gray-100 text-[35px] p-1.5 rounded-full' onClick={() => setIsMenuOpen(true)} />
 
           <div className='hidden sm:hidden md:hidden xl:flex p-[1px] rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 cursor-pointer transition-all duration-200 mr-2 '>
             <div className='p-[2px] rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 cursor-pointer transition-all duration-200 w-[70px] overflow-hidden h-9 flex items-center relative'>
@@ -150,13 +162,12 @@ export default function Navbar() {
       <div
         aria-hidden={!searchInput}
         inert={!searchInput}
-        className={`absolute left-2 right-2 top-full z-50 origin-top transition-all duration-300 ease-out motion-reduce:transition-none sm:left-auto sm:right-4 sm:w-96 ${
-          searchInput
-            ? 'visible translate-y-2 scale-100 opacity-100'
-            : 'invisible -translate-y-2 scale-95 opacity-0 pointer-events-none'
-        }`}
+        className={`absolute left-2 right-2 top-full z-50 origin-top transition-all duration-300 ease-out motion-reduce:transition-none sm:left-auto sm:right-4 sm:w-96 ${searchInput
+          ? 'visible translate-y-2 scale-100 opacity-100'
+          : 'invisible -translate-y-2 scale-95 opacity-0 pointer-events-none'
+          }`}
       >
-          <InputDemo onClose={() => setSearchInput(false)} />
+        <InputDemo onClose={() => setSearchInput(false)} />
       </div>
 
       <div>

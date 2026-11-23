@@ -14,7 +14,7 @@ const Switch = () => {
         <input
           type="checkbox"
           checked={dark}
-          onClick={() => setDark((prev)=>!prev)}
+          onChange={() => setDark((prev)=>!prev)}
 
           className="input" />
         <span className="slider" />
