@@ -48,7 +48,6 @@ export const RegisterSupabaseProvider = ({ children }) => {
                         lastName,
                         email,
                         phone,
-                        password,
                         image
                     }
                 ])

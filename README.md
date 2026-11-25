@@ -200,6 +200,18 @@ VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
 
 Do not commit private credentials or environment variables to source control.
 
+### Supabase keepalive script
+
+The root-level `supabase-keepalive.js` script uses the existing Supabase client in `src/clientSupabase.js`. It sends three read-only requests to the `Products` table when it starts, then repeats them every eight hours. No `.env` file or `dotenv` package is needed for this script.
+
+Run it with:
+
+```bash
+npm run keepalive
+```
+
+The Node.js process must remain running for the interval to work. A frontend deployment on Vercel does not keep this process alive; use an always-on server or an external scheduler instead. These requests are not guaranteed to prevent Supabase from pausing a Free Plan project due to low activity; Supabase documents upgrading to Pro as the way to guarantee no inactivity pauses.
+
 ## Project Scripts
 
 ```bash

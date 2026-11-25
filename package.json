@@ -8,6 +8,7 @@
     "build": "vite build",
     "lint": "oxlint",
     "preview": "vite preview",
+    "keepalive": "node supabase-keepalive.js",
     "start": "json-server --watch server/db.json"
   },
   "dependencies": {

@@ -23,7 +23,7 @@ import { CartContext } from '../../../../context/CartContext';
 import { useNavigate } from 'react-router-dom';
 import { DisplayContext } from '../../../../context/DisplayContext';
 import Switch from '../../../../components/DarkMode/DarkMode';
-import { Search } from 'lucide-react';
+// import { Search } from 'lucide-react';
 import InputDemo from '../../../../components/Searchinput/Search';
 
 export default function Navbar() {
@@ -55,7 +55,7 @@ export default function Navbar() {
           <span className=' group/drop1 lg:hidden relative flex flex-row justify-between items-center cursor-pointer lg:text-base xl:text-[18px] font-semibold transition-all duration-200 rounded-4xl h-full '>
             <Switch />
           </span>
-          {/* هعمله زرار الوضع الداكن */}
+         
         </div>
 
         <div className=' h-full hidden sm:hidden md:hidden lg:flex flex-row justify-between items-center lg:gap-3 xl:gap-5'>
