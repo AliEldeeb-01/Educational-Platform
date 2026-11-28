@@ -12,7 +12,7 @@ import Swal from 'sweetalert2'
 import toast from 'react-hot-toast';
 import { FaDownLong } from "react-icons/fa6";
 import { GiClick } from 'react-icons/gi';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 
