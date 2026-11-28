@@ -27,11 +27,10 @@ import h23 from '../../../assets/HiStudy/h23.jpg'
 import h24 from '../../../assets/HiStudy/h24.jpg'
 import h25 from '../../../assets/HiStudy/h25.jpg'
 import h26 from '../../../assets/HiStudy/h26.jpg'
-import Navbar from '../../../pages/home/header/nav/Navbar'
 import { Link } from 'react-router-dom'
 import { DisplayContext } from '../../../context/DisplayContext'
 
-export default function Drop2({ isHandle, setIsHandle }) {
+export default function Drop2({ isHandle }) {
   const { dark } = useContext(DisplayContext)
   // console.log(dark);
 

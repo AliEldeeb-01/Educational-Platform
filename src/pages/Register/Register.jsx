@@ -60,7 +60,7 @@ export default function Register() {
 
 
   const funHandleSub = async (data) => {
-    const { firstName, lastName, email, phone, password, confirmPassWord } = data
+    const { firstName, lastName, email, phone, password } = data
     // الخطوة دي عشان نجيب الصوره كلينك لانها بتيجي ك فورم
     const newData = {
       firstName: firstName,
@@ -68,7 +68,6 @@ export default function Register() {
       email: email,
       phone: phone,
       password: password,
-      // confirmPassWord: confirmPassWord,
       image: imgUrl
     }
 

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 // import bgImage from '../../assets/HiStudy/bg-image-10.webp'
 import { Link, useParams } from 'react-router-dom'
 import '../CourseDetails/Details.css'
@@ -9,16 +9,11 @@ import { RiStarSFill } from "react-icons/ri";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { GiWorld } from "react-icons/gi";
 import { FiAward } from "react-icons/fi";
-import video1 from '../../assets/HiStudy/video-01.jpg'
-import play1 from '../../lottieFiles/Play button.json'
 import { FaRegEye } from "react-icons/fa";
-import { Player } from '@lottiefiles/react-lottie-player';
 import { IoMdTime } from "react-icons/io";
 import { FaArrowRight } from "react-icons/fa";
 import { MdOutlineReplay } from "react-icons/md";
-import course1 from '../../assets/HiStudy/course-01.jpg'
 import { AccordionDetails } from './AccordionDetails/AccordionDetails';
-import instructor from '../../assets/HiStudy/client-06.png'
 import { IoCheckmark } from "react-icons/io5";
 import { IoIosVideocam } from "react-icons/io";
 import { FaPeopleGroup } from "react-icons/fa6";
@@ -34,7 +29,6 @@ import testion2 from '../../assets/HiStudy/testimonial-6.jpg'
 import testion1 from '../../assets/HiStudy/testimonial-8.jpg'
 import { BiDislike } from "react-icons/bi";
 import { BiLike } from "react-icons/bi";
-import axios from 'axios';
 import { CartContext } from '../../context/CartContext';
 import { DisplayContext } from '../../context/DisplayContext';
 import { supabase } from '../../clientSupabase';

@@ -2,7 +2,6 @@ import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import './Shop.css'
 import CoursesData from './CoursesData';
-import { IoArrowForward } from "react-icons/io5";
 import { MdArrowForwardIos } from "react-icons/md";
 import { GiClick } from "react-icons/gi";
 import { DisplayContext } from '../../context/DisplayContext';

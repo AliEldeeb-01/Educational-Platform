@@ -72,7 +72,7 @@ export default function NavAcc({ isMenuOpen, setIsMenuOpen }) {
         </div>
 
         <div className='flex justify-center items-center '>
-          <Acc setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} />
+          <Acc setIsMenuOpen={setIsMenuOpen} />
         </div>
 
         <div className='flex justify-center items-center w-full cursor-pointer'>

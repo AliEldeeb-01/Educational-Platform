@@ -3,11 +3,11 @@ import cardIcon from '../../assets/HiStudy/card-icon-1.png';
 // import user from '../../assets/HiStudy/avatar.jpg';
 import { AuthContext } from '../../context/supabaseContext';
 import { FcConferenceCall } from "react-icons/fc";
-import { FaReact, FaStudiovinari } from 'react-icons/fa';
+import { FaReact } from 'react-icons/fa';
 // import { DiVisualstudio } from "react-icons/di";
 import { SiTailwindcss } from "react-icons/si";
 import { FaBootstrap } from "react-icons/fa6";
-import { Link, Navigate, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { RiBookShelfLine } from "react-icons/ri";
 import { GiBookshelf } from "react-icons/gi";
 import { GoChevronRight } from "react-icons/go";
@@ -16,8 +16,7 @@ import { DisplayContext } from '../../context/DisplayContext';
 
 export default function Profile() {
 
-  const { currentUser, setCurrentUser, logOut } = useContext(AuthContext)
-  const Navigate = useNavigate()
+  const { currentUser, logOut } = useContext(AuthContext)
   const { dark } = useContext(DisplayContext)
 
 

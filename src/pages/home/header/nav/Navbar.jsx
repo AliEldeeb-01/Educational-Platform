@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import logo from '../../../../assets/HiStudy/logo.png'
 import { BiSolidCategoryAlt } from "react-icons/bi";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { CiSearch } from "react-icons/ci";
 import { CiShoppingCart } from "react-icons/ci";
 
-import { FaRegUser } from "react-icons/fa";
 // import Marquee from "react-marquee-slider";
 import { UserDropdown } from '../../../../components/UserDropdown/UserDropdown';
 import Drop1 from '../../../../components/drops/Drop1/Drop1';
@@ -15,7 +14,6 @@ import Drop4 from '../../../../components/drops/Drop4/Drop4';
 import Drop5 from '../../../../components/drops/Drop5/Drop5';
 import Drop6 from '../../../../components/drops/Drop6/Drop6';
 import Drop7 from '../../../../components/drops/Drop7/Drop7';
-import { BiCategory } from "react-icons/bi";
 import { CiMenuBurger } from "react-icons/ci";
 import NavAcc from '../../../../components/Navacc/Navacc';
 import { useContext } from 'react';
@@ -28,9 +26,9 @@ import InputDemo from '../../../../components/Searchinput/Search';
 
 export default function Navbar() {
 
-  const [isHandle, setIsHandle] = useState(true)
+  const isHandle = true
   // const [numOfProduct, setNumOfProduct] = useState(null)
-  const { records, cartIdes } = useContext(CartContext)
+  const { cartIdes } = useContext(CartContext)
   const NUM = Object.keys(cartIdes).length
   // console.log(NUM);
 
@@ -41,7 +39,7 @@ export default function Navbar() {
   const Navigate = useNavigate()
 
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const { dark, setDark } = useContext(DisplayContext)
+  const { dark } = useContext(DisplayContext)
 
   return (
 
@@ -70,7 +68,7 @@ export default function Navbar() {
 
           <span className='flex flex-row justify-between items-center hover:text-blue-600 active:text-blue-600 cursor-pointer lg:text-[14px] xl:text-base transition-all duration-200 group/home relative h-full py-10'>
             Home<MdKeyboardArrowDown className=' group-hover/home:rotate-180 group-active/home:rotate-180 transition-all duration-300' />
-            <Drop2 isHandle={isHandle} setIsHandle={setIsHandle} />
+            <Drop2 isHandle={isHandle} />
           </span>
 
           <span className='flex flex-row justify-center items-center hover:text-blue-400 active:text-blue-400 cursor-pointer group/drop3 relative lg:text-[14px] xl:text-base py-7.5 transition-all duration-200'>

@@ -1,7 +1,7 @@
-import React, { useContext, useRef, useState } from 'react';
+import React, { useContext } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -11,15 +11,11 @@ import './styles.css';
 
 // import required modules
 import { EffectCards } from 'swiper/modules';
-import course1 from '../../../../assets/HiStudy/course-01.jpg'
-import course2 from '../../../../assets/HiStudy/course-02.jpg'
-import course3 from '../../../../assets/HiStudy/course-03.jpg'
 import { DisplayContext } from '../../../../context/DisplayContext';
 import LottieLoading from '../../../../components/LottieLoading/LottieLoading';
 import CartLottie from '../../../../components/LottieLoading/CartLottie';
 
 export default function Swiiper() {
-  const Navigate = useNavigate()
   const { courseData, booksLoader, booksError, dark } = useContext(DisplayContext)
   return (
     <>

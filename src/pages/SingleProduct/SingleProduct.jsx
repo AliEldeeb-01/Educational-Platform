@@ -1,12 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { IoIosArrowForward } from "react-icons/io";
-import img from '../../assets/HiStudy/1.jpg'
 import { Link, useParams } from 'react-router-dom';
 import './SingleProduct.css'
 import { IoIosStar } from "react-icons/io";
 import { AiOutlineLoading } from 'react-icons/ai';
 import { IoArrowForward } from 'react-icons/io5';
-import axios from 'axios';
 import { CartContext } from '../../context/CartContext';
 import Swal from 'sweetalert2';
 import { DisplayContext } from '../../context/DisplayContext';
@@ -35,7 +33,7 @@ export default function SingleProduct() {
 
   const handleAddToCart = (pro, counter) => {
     addToCartFromSingleProduct(pro, counter)
-    makeCounterEq0AfterAdd(pro, counter)
+    makeCounterEq0AfterAdd(pro)
     setDisAbledBtn(true)
     setTimeout(() => {
       Swal.fire({
@@ -71,7 +69,7 @@ export default function SingleProduct() {
   }
   // console.log(singleProductData);
 
-  const makeCounterEq0AfterAdd = (pro, counter) => {
+  const makeCounterEq0AfterAdd = (pro) => {
     if (cartIdes[pro.id] == singleProductData.stock) {
       setCounter(pro.stock - cartIdes[pro.id])
     }

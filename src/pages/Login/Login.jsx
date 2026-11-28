@@ -6,27 +6,21 @@
 4-تخزين فالسكويل
 */
 
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { IoIosArrowForward } from 'react-icons/io'
 import '../Register/Register.css'
 import { Link, useNavigate } from 'react-router-dom'
 import TextField from '@mui/material/TextField'
-import InputAdornment from '@mui/material/InputAdornment'
-import { FaFileUpload } from 'react-icons/fa'
-import axios from 'axios'
-import { GiConfirmed } from 'react-icons/gi'
-import { AiOutlineLoading } from 'react-icons/ai'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod';
 import { LoginSchema } from '../../validation/Login'
 import { AuthContext } from '../../context/supabaseContext'
-import { supabase } from '../../clientSupabase'
 import { DisplayContext } from '../../context/DisplayContext'
 
 
 export default function Register() {
 
-  const { logInHandle, logInLoading, currentUser } = useContext(AuthContext)
+  const { logInHandle, logInLoading } = useContext(AuthContext)
   const Navigate = useNavigate()
   const { register, handleSubmit, formState: { errors, isDirty, isValid } } = useForm({
     resolver: zodResolver(LoginSchema),

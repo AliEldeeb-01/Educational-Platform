@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useState } from 'react';
+import React, { useContext } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { IoMdTime } from "react-icons/io";
@@ -43,7 +43,7 @@ export default function Event() {
           clickable: true,
         }}
         loop={true}
-        navigation={true}
+       
         navigation={{
           prevEl: ".prev",
           nextEl: ".next",

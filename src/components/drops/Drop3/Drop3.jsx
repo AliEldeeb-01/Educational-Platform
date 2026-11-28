@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import img from '../../../assets/HiStudy/category-10.png'
 import { Link } from 'react-router-dom'
-import Details from '../../../pages/CourseDetails/Details'
 import { DisplayContext } from '../../../context/DisplayContext'
 
 export default function Drop3() {

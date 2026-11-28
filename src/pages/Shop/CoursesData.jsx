@@ -1,6 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
-import book1 from '../../assets/HiStudy/1.jpg'
-import { MdArrowForwardIos } from "react-icons/md";
+import React, { useContext, useState } from 'react'
 import { IoArrowForward } from "react-icons/io5";
 import { DisplayContext } from '../../context/DisplayContext';
 import CartLottie from '../../components/LottieLoading/CartLottie';
@@ -12,7 +10,6 @@ import { AiOutlineLoading } from "react-icons/ai";
 import Swal from 'sweetalert2'
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
-import SingleProduct from '../SingleProduct/SingleProduct';
 
 
 
@@ -23,8 +20,6 @@ export default function CoursesData() {
 
     // console.log(cartIdes);
     const [isDisabeldBtn, setIsDisabeldBtn] = useState(null)
-
-    const Navigate = useNavigate()
 
     const NavigateId = useNavigate()
 
@@ -42,7 +37,7 @@ export default function CoursesData() {
         handleDisBtn(pro.id)
         addToCart(pro.id)
         if (cartIdes[pro.id] == 1) {
-            const timeOut = setTimeout(() => {
+            setTimeout(() => {
                 Swal.fire({
                     title: ` <div className='flex flex-col items-center gap-0.5'>
                         <span >You Added: </span>

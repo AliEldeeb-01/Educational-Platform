@@ -1,5 +1,4 @@
 // import { Data } from "@untitledui/icons";
-import axios from "axios";
 import { createContext, useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import Swal from "sweetalert2";
@@ -16,8 +15,6 @@ export const CartContextProvider = ({ children }) => {
     // }
     const [cartIdes, setCartIdes] = useState({})
     const [records, setRecords] = useState([])
-    const [numProducts, setNumProducts] = useState([])
-    const [disBtnCourse, setDisBtnCourse] = useState(false)
 
 
 
@@ -112,8 +109,6 @@ export const CartContextProvider = ({ children }) => {
     }
 
     const handleAddToCartCourses = (pro) => {
-        setDisBtnCourse(true)
-
         setCartIdes((prev) => ({
             ...prev,
             [pro.id]: 1

@@ -1,7 +1,4 @@
 import React, { useContext } from 'react'
-import cat1 from '../../../assets/HiStudy/category-1.png'
-import cat4 from '../../../assets/HiStudy/category-4.png'
-import cat9 from '../../../assets/HiStudy/category-9.png'
 import { Link } from 'react-router-dom'
 import { DisplayContext } from '../../../context/DisplayContext'
 export default function Drop5() {

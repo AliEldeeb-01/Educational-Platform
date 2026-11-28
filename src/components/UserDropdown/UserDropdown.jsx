@@ -1,6 +1,5 @@
-import React, { useContext, useState } from "react";
-import { ChevronDown, HelpCircle, LogOut01, Moon01, Plus, Settings01, User01 } from "@untitledui/icons";
-import { MenuTrigger, Button, Menu, MenuItem, Popover, Separator, Header, SubmenuTrigger } from "react-aria-components";
+import React, { useContext } from "react";
+import { MenuTrigger, Button, Menu, MenuItem, Popover } from "react-aria-components";
 import { MdEmail } from "react-icons/md";
 import { CiBookmark } from "react-icons/ci";
 import { FaPhoneAlt, FaQuestion } from "react-icons/fa";
@@ -13,13 +12,12 @@ import { CiSettings } from "react-icons/ci";
 import { IoCart } from "react-icons/io5";
 import manager from '../../assets/HiStudy/avatar.jpg'
 import { AuthContext } from "../../context/supabaseContext";
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { DisplayContext } from "../../context/DisplayContext";
 
 export const UserDropdown = () => {
   const { currentUser, logOut } = useContext(AuthContext)
-  const Navigate = useNavigate()
-  const { dark, setDark } = useContext(DisplayContext)
+  const { dark } = useContext(DisplayContext)
 
   return (
     currentUser ?

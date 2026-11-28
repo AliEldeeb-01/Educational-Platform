@@ -1,5 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
-import book1 from '../../assets/HiStudy/1.jpg'
+import React, { useContext, useState } from 'react'
 import { MdArrowForwardIos } from "react-icons/md";
 import { IoArrowForward } from "react-icons/io5";
 import { DisplayContext } from '../../context/DisplayContext';
@@ -11,8 +10,6 @@ import { AiOutlineLoading } from "react-icons/ai";
 // import 'sweetalert2/src/sweetalert2.scss'
 import Swal from 'sweetalert2'
 import toast from 'react-hot-toast';
-import { useNavigate } from 'react-router-dom';
-import SingleProduct from '../SingleProduct/SingleProduct';
 import { FaDownLong } from "react-icons/fa6";
 import { GiClick } from 'react-icons/gi';
 import { Link } from 'react-router-dom';
@@ -20,14 +17,12 @@ import { Link } from 'react-router-dom';
 
 
 export default function CoursesData() {
-  const { booksData, booksError, booksLoader, courseData, courseSearch, dark } = useContext(DisplayContext)
+  const { booksError, booksLoader, courseData, courseSearch, dark } = useContext(DisplayContext)
   // console.log(booksData);
   const { addToCart, cartIdes } = useContext(CartContext)
 
   // console.log(cartIdes);
   const [isDisabeldBtn, setIsDisabeldBtn] = useState(null)
-
-  const Navigate = useNavigate()
 
   const NavigateId = useNavigate()
   const normalizedSearch = courseSearch.trim().toLowerCase()
@@ -49,7 +44,7 @@ export default function CoursesData() {
     handleDisBtn(pro.id)
     addToCart(pro.id)
     if (cartIdes[pro.id] == 1) {
-      const timeOut = setTimeout(() => {
+      setTimeout(() => {
         Swal.fire({
           title: ` <div className='flex flex-col items-center gap-0.5'>
                         <span >You Added: </span>

@@ -1,9 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
-import bg1 from '../../assets/HiStudy/bg-g1.webp'
 import { Link } from 'react-router-dom'
 import { IoIosArrowForward } from "react-icons/io";
 import './CartPage.css'
-import bok1 from '../../assets/HiStudy/1.jpg'
 import { MdClose } from "react-icons/md";
 import { CartContext } from '../../context/CartContext';
 import Box from '@mui/material/Box';
@@ -17,7 +15,7 @@ import { DisplayContext } from '../../context/DisplayContext';
 
 export default function CartPage() {
 
-  const { addToCart, cartIdes, getCartIdes, setCartIdes, records, changeAmount, deleteProduct } = useContext(CartContext)
+  const { cartIdes, getCartIdes, records, changeAmount, deleteProduct } = useContext(CartContext)
   // console.log(records);
   const { dark } = useContext(DisplayContext)
 
@@ -28,7 +26,7 @@ export default function CartPage() {
   })) ?? [];
   // setRecords(productsFullInfo)
 
-  console.log(productsFullInfo);
+  // console.log(productsFullInfo);
   const [dis22, setDis22] = useState(false)
   const confirmBuying = () => {
     setDis22(true)
@@ -95,7 +93,7 @@ export default function CartPage() {
                 <p className='text-2xl text-red-700 capitalize text-shadow-red-600 ' > your cart is empty : ( </p>
                 <Link className='text-4xl text-blue-600 capitalize underline w-full text-center ' to={'/shop'} > what about adding some products... </Link>
               </div>
-              : productsFullInfo?.map((val, index) => {
+              : productsFullInfo?.map((val) => {
 
                 const finalPrice = (val.price - (val.price * val.discount / 100))
 

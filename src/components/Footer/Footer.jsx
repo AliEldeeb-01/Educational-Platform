@@ -1,11 +1,9 @@
 import React, { useContext } from 'react'
 import logo1 from '../../assets/HiStudy/logo.png'
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa'
-import { FiArrowRight, FiArrowUp } from 'react-icons/fi'
-import { IoMoonOutline } from 'react-icons/io5'
+import { FiArrowRight } from 'react-icons/fi'
 import { DisplayContext } from '../../context/DisplayContext'
 import { Link, useNavigate } from 'react-router-dom'
-import { AuthContext } from '../../context/supabaseContext'
 
 export default function Footer() {
   const navigate = useNavigate()

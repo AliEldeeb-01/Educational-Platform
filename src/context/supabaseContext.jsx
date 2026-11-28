@@ -13,7 +13,7 @@ export const RegisterSupabaseProvider = ({ children }) => {
     const [regDataLoading, setRegDataLoading] = useState(false)
     const [logInLoading, setLogInLoading] = useState(false)
     const [currentUser, setCurrentUser] = useState(null)
-    const {cartIdes ,setCartIdes} = useContext(CartContext)
+    const { setCartIdes } = useContext(CartContext)
     // const Navigate = useNavigate()
 
     useEffect(
@@ -39,9 +39,9 @@ export const RegisterSupabaseProvider = ({ children }) => {
                 console.log(failed);
 
             } else {
-                const { firstName, lastName, email, phone, password, image } = RegisterData
+                const { firstName, lastName, email, phone, image } = RegisterData
 
-                const { data, error } = await supabase.from('EduStudents').insert([
+                await supabase.from('EduStudents').insert([
                     {
                         id: dataReg.user.id,
                         firstName,
@@ -75,7 +75,7 @@ export const RegisterSupabaseProvider = ({ children }) => {
 
     const logInHandle = async (userData) => {
 
-        const { email, password, id } = userData
+        const { email, password } = userData
 
         try {
             setLogInLoading(true)

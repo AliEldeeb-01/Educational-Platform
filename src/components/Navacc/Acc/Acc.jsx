@@ -163,7 +163,7 @@ const megaMenuItems = [
   }
 ]
 
-export function Acc({ setIsMenuOpen, isMenuOpen }) {
+export function Acc({ setIsMenuOpen }) {
   const { dark } = useContext(DisplayContext)
   const ScrollUpAndFalseMenu = ()=>{
     setIsMenuOpen(false)
